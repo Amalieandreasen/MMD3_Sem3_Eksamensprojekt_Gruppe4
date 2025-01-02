@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <RouterView></RouterView>
+    <h1>heej</h1>
 </template>
 
 <style scoped></style>
