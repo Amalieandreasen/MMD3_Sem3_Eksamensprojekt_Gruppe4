@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import Navigation from '../assets/components/Navigation.vue';
+</script>
 
 <template>
-    <h1>Sangiovanni</h1>
+    <Navigation/>
 </template>
 
 <style scoped></style>
