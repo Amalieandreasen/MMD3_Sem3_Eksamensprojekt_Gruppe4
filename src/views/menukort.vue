@@ -1,7 +1,16 @@
-<script setup></script>
+<script setup>
+import TheButton from '@/assets/components/TheButton.vue';
+import { ref } from 'vue';
+
+</script>
 
 <template>
-    <h1>heej dofisbfpd</h1>
+    <section class="heroSec">
+        <img src="" alt="">
+        <h1>Menukort</h1>
+        <TheButton title="Kontakt mig"/>
+    </section>
+
 </template>
 
 <style scoped></style>
