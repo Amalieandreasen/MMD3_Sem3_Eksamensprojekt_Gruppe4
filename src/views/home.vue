@@ -2,9 +2,28 @@
 import {ref} from 'vue'; 
 import Navigation from '../assets/components/Navigation.vue';
 import TheButton from '../assets/components/TheButton.vue';
+import ImageSlider from '../assets/components/ImageSlider.vue';
+
+import slide1 from '../assets/img/forsideDesktop/slide1.png';
+import slide2 from '../assets/img/forsideDesktop/slide2.png';
+import slide3 from '../assets/img/forsideDesktop/slide3.png';
+import slide4 from '../assets/img/forsideDesktop/slide4.png';
+import slide5 from '../assets/img/forsideDesktop/slide5.png';
+import slide6 from '../assets/img/forsideDesktop/slide6.png';
+import slide7 from '../assets/img/forsideDesktop/slide7.png';
 
 // States
 const h1 = ref("Autentisk italiensk restaurant i Aalborg")
+
+const images =[
+    {src: slide1, alt:'slide1'},
+    {src: slide2, alt:'slide2'},
+    {src: slide3, alt:'slide3'},
+    {src: slide4, alt:'slide4'},
+    {src: slide5, alt:'slide5'},
+    {src: slide6, alt:'slide6'},
+    {src: slide7, alt:'slide7'},
+];
 
 </script>
 
@@ -32,6 +51,9 @@ const h1 = ref("Autentisk italiensk restaurant i Aalborg")
         </div>
         <img src="../assets/img/forsideMobil/canneloni.png" alt="Familen Volpi" srcset="../assets/img/forsideDesktop/canneloni.png 768w">
     </section>
+    <div class="imageslider">
+        <ImageSlider :images="images"/>
+    </div>
 </template>
 
 <style scoped>
@@ -73,15 +95,15 @@ const h1 = ref("Autentisk italiensk restaurant i Aalborg")
    text-align: center;
 }
 
-.firstSection h2, .firstSection p{
+.firstSection h2, .firstSection p, .secondSection h2, .secondSection p{
     margin-inline: 2rem;
 }
 
-.firstSection h2, .firstSection p, .firstSection img{
+.firstSection h2, .firstSection p, .firstSection img, .secondSection h2, .secondSection p, .secondSection img{
     margin-top: 2rem;
 }
 
-.firstSection img{
+.firstSection img, .secondSection img{
     width: 100%;
 }
 
