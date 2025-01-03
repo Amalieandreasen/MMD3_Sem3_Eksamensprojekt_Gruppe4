@@ -54,6 +54,9 @@ const images =[
     <div class="imageslider">
         <ImageSlider :images="images"/>
     </div>
+    <section class="focusedEntryPoints">
+        
+    </section>
 </template>
 
 <style scoped>
