@@ -1,56 +1,57 @@
 <script setup>
-import {onMounted} from "vue";
+import { ref, onMounted } from 'vue';
 
+// States
+const isScrolled = ref(false);
+
+// Functions
 onMounted(() => {
-    const nav = document.querySelector("nav");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 0){
-            nav.classList.add("scrolled")
-        } else{
-            nav.classList.remove("scrolled")
-        }
-    })
-})
+  window.addEventListener('scroll', () => {
+    isScrolled.value = window.scrollY > 0;
+  });
+});
 </script>
 
+
 <template>
-    <nav>
-      <div class="logo">  <router-link to="/"><img src="../img/forsideDesktop/logo.png" alt=""></router-link></div>
-      <label for="btn" class="icon"><img src="../img/SVG/burgermenu.svg" alt="burgermenu"></label>
-      <input type="checkbox" id="btn">
-            <ul>
-                <li>
-                    <label for="btn-1" class="show">Menu &#x25BC;</label>
-                    <a href="#">Menu &#x25BC;</a>
-                    <input type="checkbox" id="btn-1">
-            <ul>
-                <li><router-link to="/menukort">Menukort</router-link></li>
-                <li>  <router-link to="/vinkort">Vinkort</router-link></li>
-                <li><router-link to="/drikkevarer">Drikkevarer</router-link></li>
-                <li> <a href="https://login.onlinepos.dk/taw_v3/13320/">Take Away</a></li>
-            </ul>
+    <nav :class="{ scrolled: isScrolled }">
+      <div class="logo">
+        <router-link to="/"><img src="../img/forsideDesktop/logo.png" alt="" /></router-link>
+      </div>
+      <label for="btn" class="icon"><img src="../img/SVG/burgermenu.svg" alt="burgermenu" /></label>
+      <input type="checkbox" id="btn" />
+      <ul>
+        <li>
+          <label for="btn-1" class="show">Menu &#x25BC;</label>
+          <a href="#">Menu &#x25BC;</a>
+          <input type="checkbox" id="btn-1" />
+          <ul>
+            <li><router-link to="/menukort">Menukort</router-link></li>
+            <li><router-link to="/vinkort">Vinkort</router-link></li>
+            <li><router-link to="/drikkevarer">Drikkevarer</router-link></li>
+            <li><a href="https://login.onlinepos.dk/taw_v3/13320/">Take Away</a></li>
+          </ul>
         </li>
         <li>
-            
-            <label for="btn-2" class="show">Selskaber &#x25BC;</label>
-            <a href="#">Selskaber &#x25BC;</a>
-            <input type="checkbox" id="btn-2">
-            <ul>
-                <li> <router-link to="/selskabspakker">Selskabspakker & møder</router-link></li>
-                <li>  <router-link to="/selskabslokaler">Se vores selskabslokaler</router-link></li>
-                <li><router-link to="/selskabsmenu">Selskabsmenu ud af huset</router-link></li>
-            </ul>
+          <label for="btn-2" class="show">Selskaber &#x25BC;</label>
+          <a href="#">Selskaber &#x25BC;</a>
+          <input type="checkbox" id="btn-2" />
+          <ul>
+            <li><router-link to="/selskabspakker">Selskabspakker & møder</router-link></li>
+            <li><router-link to="/selskabslokaler">Se vores selskabslokaler</router-link></li>
+            <li><router-link to="/selskabsmenu">Selskabsmenu ud af huset</router-link></li>
+          </ul>
         </li>
         <li><a href="#">IL Bar</a></li>
-        <li> <router-link to="/julognytaar">Jul & nytår</router-link></li>
-        <li> <a href="#">Events</a></li>
-        <li> <a href="#">Kontakt</a></li>
-        <li> <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" class="book">Book bord</a></li>
-        </ul>
+        <li><router-link to="/julognytaar">Jul & nytår</router-link></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Om Sangiovanni</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" class="book">Book bord</a></li>
+      </ul>
     </nav>
-
-</template>
+  </template>
+  
 
 <style scoped>
 nav a{
@@ -60,8 +61,8 @@ nav a{
     font-size: 20px;
     text-decoration: none;
     padding: 8px 15px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
     line-height: 70px;
 }
 
@@ -108,9 +109,10 @@ nav ul ul li{
 
 nav .logo img{
     float: left;
-    width: 300px;
+    width: 200px;
     margin-left: 40px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 nav{
     display: flex;
@@ -120,6 +122,7 @@ nav{
    top: 0;
    transition: background-color 0.3s ease;
    z-index: 1000;
+   margin-top: -100px;
 }
 
 nav.scrolled{
@@ -143,7 +146,6 @@ nav ul ul li a:hover{
 }
 
 .book{
-    background-color: var(--background);
     border: 1px solid var(--gold);
     color: var(--gold);
     font-size: 20px;
@@ -165,6 +167,7 @@ nav ul ul li a:hover{
     nav .logo{
         padding-left: 30px;
         width: 100%;
+        margin-bottom: -2rem;
     }
 
     nav ul li, nav ul ul li{
@@ -213,6 +216,7 @@ nav ul ul li a:hover{
 
     nav{
     display: block;
+
 }
 }
 
