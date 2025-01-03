@@ -2,16 +2,18 @@
 import TheButton from '@/assets/components/TheButton.vue';
 import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
+import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
+import Forretter from '@/assets/components/Forretter.vue';
 
 const menukortTabs = [
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
-  { title: "Forret", component: "Forret" },
+  { title: "Snacks & Drinks", component: SnacksDrinks },
+  { title: "Forretter", component: Forretter },
+  { title: "Pasta", component: "Forret" },
+  { title: "Kød", component: "Forret" },
+  { title: "Tilbehør", component: "Forret" },
+  { title: "Pizze", component: "Forret" },
+  { title: "Dessert", component: "Forret" },
+  { title: "Børnemenu", component: "Forret" },
 ];
 
 </script>
@@ -37,7 +39,7 @@ const menukortTabs = [
     <TheButton title="Kontakt mig"/>
 </section>
 
-<Tabs :tabs="menukortTabs" title="Snacks Menu" />
+<Tabs :tabs="menukortTabs" title="Udvalg" />
 </main>
 </template>
 

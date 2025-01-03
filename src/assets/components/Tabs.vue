@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 
 defineProps({
   tabs: {
@@ -13,37 +13,42 @@ defineProps({
 });
 
 const activeTab = ref(0);
+const scrollPercentage = ref(0);
+
+const onScroll = (event) => {
+  const element = event.target;
+  const maxScroll = element.scrollWidth - element.clientWidth;
+  scrollPercentage.value = (element.scrollLeft / maxScroll) * 100;
+};
 </script>
 
 <template>
-  <div class="tabs-container">
-    <!-- Optional Page Title -->
-    <h2 v-if="title" class="page-title">{{ title }}</h2>
-
-    <!-- Tab Headers -->
-    <div class="tab-headers">
-      <button
-        v-for="(tab, index) in tabs"
-        :key="index"
-        :class="{ active: activeTab === index }"
-        @click="activeTab = index"
-      >
-        {{ tab.title }}
-      </button>
+  <div class="tabsContainer">
+    <div class="tabHeaderContainer">
+      <div class="tabHeaders" @scroll="onScroll">
+        <button
+          v-for="(tab, index) in tabs"
+          :key="index"
+          :class="{ active: activeTab === index }"
+          @click="activeTab = index"
+        >
+          {{ tab.title }}
+        </button>
+      </div>
+      <div class="scrollIndicator">
+        <div class="scrollProgress" :style="{ width: scrollPercentage + '%' }"></div>
+      </div>
     </div>
 
-    <!-- Tab Content -->
-    <div class="tab-content">
-      <!-- Dynamically render the content component -->
+    <div class="tabContent">
       <component :is="tabs[activeTab].component" />
     </div>
   </div>
 </template>
 
 <style scoped>
-.tabs-container {
+.tabsContainer {
   width: 100%;
-  background-color:  green;
 }
 
 .page-title {
@@ -52,31 +57,57 @@ const activeTab = ref(0);
   font-size: 1.5rem;
 }
 
-.tab-headers {
+.tabHeaderContainer {
+  position: relative;
+}
+
+.tabHeaders {
   display: flex;
   overflow-x: auto;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #ccc;
+  background-color: var(--green);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
 }
 
-.tab-headers button {
+/* For edge, chrome */
+.tabHeaders::-webkit-scrollbar {
+  display: none; 
+}
+
+.tabHeaders button {
   flex: 1;
   padding: 0.5rem 1rem;
   background: none;
   border: none;
-  border-bottom: 2px solid transparent;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 20px;
   white-space: nowrap;
-  text-transform: capitalize;
+  color: var(--gold);
 }
 
-.tab-headers button.active {
-  border-bottom: 2px solid #00b894;
+.tabHeaders button.active {
+  border-bottom: 2px solid var(--gold);
   font-weight: bold;
 }
 
-.tab-content {
+.scrollIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scrollProgress {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.2s ease;
+}
+
+.tabContent {
   padding: 1rem;
 }
 </style>
