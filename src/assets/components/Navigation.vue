@@ -155,7 +155,7 @@ nav ul ul li a:hover{
     box-shadow: none;
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 1024px){
     nav ul{
         margin-right: 0px;
         float: left;
