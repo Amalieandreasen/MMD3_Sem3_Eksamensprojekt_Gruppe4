@@ -4,8 +4,10 @@ import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
 import Forretter from '@/assets/components/Forretter.vue';
+import Saesonretter from '@/assets/components/saesonretter.vue';
 
 const menukortTabs = [
+  { title: "Sæsonretter", component: Saesonretter },
   { title: "Snacks & Drinks", component: SnacksDrinks },
   { title: "Forretter", component: Forretter },
   { title: "Pasta", component: "Forret" },
@@ -30,13 +32,15 @@ const menukortTabs = [
     </section>
 
 <section class="introSec">
-    <h3>Sæsonretter</h3>
-    <p>Vi har forsigtigt udvalgt vores sæsonretter for at give dig den bedste oplevelse, med friske råvare der passer til årstiden. 
-    <br>
-    <br>
-    For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare. </p>
-    <TheButton title="Kontakt mig"/>
-    <TheButton title="Kontakt mig"/>
+    <h3>Noget for enhver smag</h3>
+    <p>
+      Oplev vores lækre italienske menukort med noget for enhver smag. Vi har sammensat et væld af lækre italienske retter både faste velkendte klassikere og sæsonretter som bliver udskiftet i forhold til smag og sæson. <br> <br>
+      For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare.  
+    </p>
+    <div class="btnDiv">
+    <TheButton title="Vinkort"/>
+    <TheButton title="Drikkevare"/>
+    </div>
 </section>
 
 <Tabs :tabs="menukortTabs" title="Udvalg" />
@@ -91,6 +95,14 @@ const menukortTabs = [
 .introSec h3 {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.btnDiv{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 
