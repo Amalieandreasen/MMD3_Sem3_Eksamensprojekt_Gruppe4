@@ -23,7 +23,7 @@ defineProps({
 </script>
 
 <template>
-    <section class="focusedEntryPoints">
+
         <article class="entryPoint">
            <div class="entryPointContent" :style="{ backgroundImage: 'url(' + image + ')' }">
             <h3>{{ h3 }}</h3>
@@ -32,15 +32,15 @@ defineProps({
            </div> 
            <div class="Overlay"></div>
         </article>
-    </section>
+   
 </template>
 
 <style scoped>
 .entryPointContent{
     background-image:url(../img/forsideDesktop/fepSelskabspakker.png);
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
-    height: 400px;
     background-size: cover;
+    height: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -60,13 +60,14 @@ defineProps({
     position: relative;
 }
 
-.Overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 0; 
+@media all and (min-width: 768px){
+  .entryPoint{
+    max-width: 25vw;
+}
+
+.entryPointContent{
+  height: 400px;
+  max-width: 100%;
+}
 }
 </style>

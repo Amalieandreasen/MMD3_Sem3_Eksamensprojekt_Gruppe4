@@ -7,6 +7,7 @@ import Navigation from '../assets/components/Navigation.vue';
 import TheButton from '../assets/components/TheButton.vue';
 import ImageSlider from '../assets/components/ImageSlider.vue';
 import FocusedEntryPoints from '@/assets/components/FocusedEntryPoints.vue';
+import TheFooter from '@/assets/components/TheFooter.vue';
 
 import slide1 from '../assets/img/forsideDesktop/slide1.png';
 import slide2 from '../assets/img/forsideDesktop/slide2.png';
@@ -47,10 +48,27 @@ const splideOptions = ref({
   },
 });
 
+const isLoading = ref(true);
+
+setTimeout(() => {
+    isLoading.value = false;
+}, 3000);
 
 </script>
 
 <template>
+    <Transition name="fade">
+      <div v-if="isLoading" class="loadingScreen">
+        <div class="spinner">
+            <img src="../assets/img/SVG/pizza.svg" alt="pizza">
+        </div>
+        <div class="logoLoading">
+        <img src="../assets/img/forsideDesktop/logo.png" alt="logo">
+    </div>
+      </div>
+    </Transition>
+    <Transition name="fade">
+        <div v-if="!isLoading">
     <Navigation/>
     <section class="hero">
         <video muted loop autoplay src="../assets/img/forsideDesktop/heroVideo.mp4"></video>
@@ -203,9 +221,50 @@ const splideOptions = ref({
     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsangiovanniaalborg%2Fposts%2Fpfbid0GEZXF4NWEfP8wqFUtuTWubvwCzENvYqiqVYLtMae23kBc4oSFDNegT7z1jtioposl&show_text=false&width=500" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
 </article>
+<TheFooter/>
+ </div>
+</Transition>
+
 </template>
 
 <style scoped>
+.face-enter-active, .fade-leave-active{
+transition: opacity 1s ease-in-out;
+position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.fade-enter-from, .fade-leave-to{
+    opacity: 0;
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--green);
+}
+
+.spinner img{
+    animation: spin 2s linear infinite;
+    width: 150px;
+    transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -296,6 +355,7 @@ const splideOptions = ref({
     margin-bottom: 1rem;
 }
 
+
 @media all and (min-width: 768px){
 .firstSection{
     display: flex;
@@ -316,12 +376,17 @@ const splideOptions = ref({
 
 .focusedWrapper{
     display: flex;
+    justify-content: center;
 }
 
 .posts{
    display: flex;
    flex-direction: row;
-   margin-bottom: 2rem;
+   margin-bottom: 2rem ;
+}
+
+iframe{
+    max-width: 30vw;
 }
 }
 </style>
