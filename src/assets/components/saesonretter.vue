@@ -28,6 +28,7 @@ const menuItemsFK = [
     </div>
   </section>
   <section class="menuList">
+    <h3>Forreter</h3>
     <div v-for="item in menuItemsFR" :key="item.name" class="menuItem">
       <div class="menuTxt">
         <h3>{{ item.name }}</h3>
@@ -39,6 +40,7 @@ const menuItemsFK = [
     </div>
   </section>
   <section class="menuList">
+    <h3>Pasta & Ris</h3>
     <div v-for="item in menuItemsPR" :key="item.name" class="menuItem">
       <div class="menuTxt">
         <h3>{{ item.name }}</h3>
@@ -50,6 +52,7 @@ const menuItemsFK = [
     </div>
   </section>
   <section class="menuList">
+    <h3>Fisk & Kød</h3>
     <div v-for="item in menuItemsFK" :key="item.name" class="menuItem">
       <div class="menuTxt">
         <h3>{{ item.name }}</h3>

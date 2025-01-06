@@ -105,5 +105,10 @@ const menukortTabs = [
   gap: 1rem;
 }
 
+@media all and (min-width: 768px){
+
+  
+
+}
 
 </style>
