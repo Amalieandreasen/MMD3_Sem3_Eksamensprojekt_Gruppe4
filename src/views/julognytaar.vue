@@ -764,6 +764,10 @@ path.explode{
     padding: 1rem;
 }
 
+.nytaarsaftenButtons, .nytaarsmenuButtons{
+    flex-direction:row;
+}
+
 }
 
 </style>

@@ -33,10 +33,6 @@ const splideOptions = ref({
     <SplideSlide v-for="(image,index) in props.images" :key="index">
       <img :src="image.src" :alt="image.alt">
     </SplideSlide>
-    
-    <div class="splide__progress">
-      <div class="splide__progress__bar"></div>
-    </div>
   </Splide>
 </template>
 

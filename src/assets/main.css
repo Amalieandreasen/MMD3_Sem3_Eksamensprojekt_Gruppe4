@@ -50,6 +50,10 @@ p, li{
     color: var(--white);
 }
 
+a{
+    text-decoration: none;
+}
+
 @media (min-width:768px){
    h1{
     font-size: 60px;

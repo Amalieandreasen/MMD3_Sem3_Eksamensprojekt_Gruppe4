@@ -44,6 +44,9 @@ footer{
 
 .logo{
     margin-bottom: 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .logo img{
@@ -78,6 +81,7 @@ iframe{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    align-items:center;
 }
 
 .kontakt h2{
@@ -106,6 +110,10 @@ align-items: baseline;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.kontant{
+    align-items:end;
 }
 
 }
