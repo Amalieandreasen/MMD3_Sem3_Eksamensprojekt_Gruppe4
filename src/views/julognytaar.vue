@@ -23,7 +23,9 @@ import TheFooter from '@/assets/components/TheFooter.vue';
         <p>Fejr julen med eksklusive middage i La Cantina, hvor vi tilbyder specialdesignede menuer for at skabe den perfekte julestemning. Nyd en aften med familie og venner med alt fra velkomstdrinks til en skøn middag akkompagneret af tilpassede vine.
         </p>
         <div class="juleButton">
-        <TheButton title="Se menuen" />
+            <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
+        <TheButton title="Se menuen" isPdf="true"/>
+    </a>
     </div>
 </div>
         <img src="../assets/img/julognytarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
@@ -625,8 +627,8 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 </template>
 
 <style scoped>
-html, body {
-  overflow-x: hidden;
+a{
+    text-decoration: none;
 }
 .heroSec {
   position: relative;
