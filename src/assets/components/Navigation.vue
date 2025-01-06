@@ -94,6 +94,9 @@ nav ul ul{
     padding: 0;
 }
 
+nav.scrolled ul ul{
+    background-color: var(--green);
+} 
 nav ul li:hover > ul{
     top: 60px;
     opacity: 1;

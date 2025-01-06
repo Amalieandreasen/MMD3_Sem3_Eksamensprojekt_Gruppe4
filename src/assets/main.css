@@ -42,7 +42,7 @@ h3{
     color: var(--gold);
 }
 
-p{
+p, li{
     font-family: "Barlow", serif;
     font-size: 16px;
     font-weight: 400;
