@@ -24,31 +24,35 @@ const menukortTabs = [
     <main>
         <section class="heroSec">
       <div class="heroOverlay">
-        <img src="../assets/img/menuHeroMobil.png" alt="">
+        <img src="../assets/img/menuDesktop/hero.png" alt="">
         <div class="heroText">
           <h1>Menukort</h1>
         </div>
       </div>
     </section>
 
-<section class="introSec">
-    <h3>Noget for enhver smag</h3>
-    <p>
-      Oplev vores lækre italienske menukort med noget for enhver smag. Vi har sammensat et væld af lækre italienske retter både faste velkendte klassikere og sæsonretter som bliver udskiftet i forhold til smag og sæson. <br> <br>
-      For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare.  
-    </p>
-    <div class="btnDiv">
-    <TheButton title="Vinkort"/>
-    <TheButton title="Drikkevare"/>
+    <section class="introSec">
+      <div class="introWrapper">
+      <div>
+      <h3>Noget for enhver smag</h3>
+      <p>
+        Oplev vores lækre italienske menukort med noget for enhver smag. Vi har sammensat et væld af lækre italienske retter både faste velkendte klassikere og sæsonretter som bliver udskiftet i forhold til smag og sæson. <br> <br>
+        For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare.
+      </p>
+      <div class="btnDiv">
+        <TheButton title="Vinkort"/>
+        <TheButton title="Drikkevare"/>
+      </div>
     </div>
-</section>
+      <img class="introImg" src="../assets/img/menuHeroMobil.png" alt="Menu Image">
+    </div>
+    </section>
 
 <Tabs :tabs="menukortTabs" title="Udvalg" />
 </main>
 </template>
 
 <style scoped>
-
 .heroSec {
   position: relative;
   width: 100%;
@@ -96,18 +100,37 @@ const menukortTabs = [
     text-align: center;
     margin-bottom: 1rem;
 }
+.introImg{
+  display: none;
+}
 
 .btnDiv{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: 2rem;
 }
 
 @media all and (min-width: 768px){
 
-  
+  .introWrapper{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  /* Show the image next to the text */
+  .introImg {
+    display: block; /* Display image on larger screens */
+    width: 40%;  /* Adjust width as necessary */
+    margin: 0;  /* Remove margin */
+  }
+
+  .introSec p {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
 
 }
 

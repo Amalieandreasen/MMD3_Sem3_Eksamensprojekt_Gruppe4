@@ -71,7 +71,7 @@ const menuItems = [
 }
 
 .menuList {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .menuItem {
