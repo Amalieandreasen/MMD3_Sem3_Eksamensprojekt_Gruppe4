@@ -29,7 +29,7 @@ onMounted(() => {
             <li><router-link to="/menukort">Menukort</router-link></li>
             <li><router-link to="/vinkort">Vinkort</router-link></li>
             <li><router-link to="/drikkevarer">Drikkevarer</router-link></li>
-            <li><a href="https://login.onlinepos.dk/taw_v3/13320/">Take Away</a></li>
+            <li><a href="https://login.onlinepos.dk/taw_v3/13320/" target="_blank">Take Away</a></li>
           </ul>
         </li>
         <li>
@@ -47,7 +47,7 @@ onMounted(() => {
         <li><a href="#">Events</a></li>
         <li><a href="#">Om Sangiovanni</a></li>
         <li><a href="#">Kontakt</a></li>
-        <li><a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" class="book">Book bord</a></li>
+        <li><a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" class="book" target="_blank">Book bord</a></li>
       </ul>
     </nav>
   </template>

@@ -40,40 +40,47 @@ const splideOptions = ref({
         <p>Her på siden kan du se et udvalg af de pakker vi tilbyder og nederst på siden har du mulighed for at se hvordan du kan tilpasse menuen til dit selskab</p>
     </section>
    <section class="helaftensArrangement">
+    <div class="displayWrapper">
     <h3>Helaftensarrangement</h3>
     <p>Ved et helaftens arrangement på SanGiovanni, er alt med i den fastsatte kuvertpris lige fra velkomst til bar og natmad.</p>
     <p>Et helaftensarrangement kan tilpasses til lige dine behov alt efter menuen, hvor mange der skal med og hvilken anledning selskabet skal holdes til. Selskabes kan holdes i vores flotter lokaler i La Cantina</p>
-    <img src="../assets/img/selskabspakkerMobil/helaftensarrangement.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/helaftensarrangement.png 768w">
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
         <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
         <TheButton title="Hent brochure om selskaber" :isPdf="true"/>
     </a>
     </div>
+</div>
+    <img src="../assets/img/selskabspakkerMobil/helaftensarrangement.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/helaftensarrangement.png 768w">
    </section>
    <section class="bryllupsPakken">
+    <div class="displayWrapper">
     <h3>Bryllupspakken</h3>
     <p> Brylluppet er livets store fest og vi har mange års erfaring med at gøre denne store dag helt jeres. Der er mange ting der skal tages hånd om, og vi hjælper jer gerne hele vejen igennem med sparring og vejledning så I får lige nøjagtig den fest i drømmer om.</p>
-    <img src="../assets/img/selskabspakkerMobil/bryllupspakken.png" alt="Opdækning" srcset="../assets/img/selskabspakkerDesktop/bryllupspakken.png 768w">
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
         <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
         <TheButton title="Læs alt om bryllupspakken" :isPdf="true"/>
     </a>
     </div>
+</div>
+    <img src="../assets/img/selskabspakkerMobil/bryllupspakken.png" alt="Opdækning" srcset="../assets/img/selskabspakkerDesktop/bryllupspakken.png 768w">
    </section>
    <section class="konfirmationsPakken">
+    <div class="displayWrapper">
     <h3>Konfirmationspaken</h3>
     <p> Konfirmation er en stor dag for det unge menneske, og derfor hjælper vi gerne med at holde en smuk og vellykket fest lige efter jeres behov. Kontakt os i dag, så hjælper vi jer fra start til slut.</p>
-    <img src="../assets/img/selskabspakkerMobil/konfirmationspakken.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/konfirmationspakken.png 768w">
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
         <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
         <TheButton title="Læs alt om konfirmationspakken" :isPdf="true"/>
     </a>
     </div>
+</div>
+    <img src="../assets/img/selskabspakkerMobil/konfirmationspakken.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/konfirmationspakken.png 768w">
    </section>
    <section class="modePakken">
+    <div class="displayWrapper">
     <h3>Mødepakken</h3>
     <p> Hold Deres næste møde i inspirerende og unikke rammer i hjertet af Aalborg. Vi ligger lige i mellem to af Aalborgs store P-pladser, ”Budolfi” og ”Gåsepigen”.
         Vi har på SanGiovanni flere muligheder for at afholde et inspirerende møde..</p>
@@ -86,10 +93,11 @@ const splideOptions = ref({
             <li>Flipover</li>
             <li>2 retters middag inkl. 2 genstande, vand og afsluttet med kaffe/te med sødt</li>
         </ul>
-    <img src="../assets/img/selskabspakkerMobil/modepakken.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/modepakken.png 768w">
-    <div class="buttonWrapper">
+        <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
     </div>
+</div>
+    <img src="../assets/img/selskabspakkerMobil/modepakken.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/modepakken.png 768w">
    </section>
    <section class="menuSlider">
     <h3>Tilpas dit arrangement</h3>
@@ -157,18 +165,22 @@ const splideOptions = ref({
     </Splide>
    </section>
    <section class="focusedWrapper">
+    <router-link to="/selskabslokaler">
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground2
     h3="Se vores selskabslokaler"
     p="Vi har adskillige flotte selskabslokaler til dit arrangement. Læs mere her og se billeder fra vores La Cantina."
     buttonTitle="Læs mere"
     />
+</router-link>
+<router-link to="/selskabsmenu">
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground3
     h3="Selskabsmenu ud af huset"
     p="Skal du holde et selskab derhjemme, har vi den helt rigtige løsning for dig med vores selskabsmenu ud af huset."
     buttonTitle="Læs mere"
     />
+</router-link>
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground4
     h3="IL Bar"
@@ -255,6 +267,7 @@ margin-block: 2rem;
 
 .menuSlider{
     background-color: var(--green);
+    padding-bottom: 2rem;
 }
 
 .menuSlider h3{
@@ -284,6 +297,44 @@ color: var(--background);
 .focusedWrapper{
     display: flex;
     justify-content: center;
+    margin-block: 5rem;
+}
+
+.intro{
+    margin-inline: 5rem;
+}
+
+.helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken{
+    display: flex;
+    margin-inline: 5rem;
+    margin-block: 3rem;
+    gap: 2rem;
+}
+
+.helaftensArrangement img, .bryllupsPakken img, .konfirmationsPakken img, .modePakken img{
+    width: 50%;
+}
+
+.buttonWrapper{
+    flex-direction: row;
+}
+
+.bryllupsPakken, .modePakken{
+    flex-direction: row-reverse;
+}
+
+.menuSlider{
+    padding-inline: 10rem;
+}
+
+.slide1 img, .slide2 img, .slide3 img{
+    display: block;
+    width: 30%;
+}
+
+.slide1, .slide2, .slide3{
+    display: flex;
+    flex-direction: row;
 }
 
 }

@@ -325,6 +325,11 @@ position: absolute;
     width: 100%;
 }
 
+.canneloniContent{
+    background-image: url(../assets/img/SVG/italien.svg);
+    background-size: contain;
+}
+
 .reviews{
     background-color: var(--green);
     padding: 2rem;
