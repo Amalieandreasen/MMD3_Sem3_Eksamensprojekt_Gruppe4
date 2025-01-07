@@ -24,8 +24,8 @@ const onScroll = (event) => {
 
 <template>
   <div class="tabsContainer">
-    <div class="tabHeaderContainer">
-      <div class="tabHeaders" @scroll="onScroll">
+    <aside class="tabNav">
+      <div class="tabHeaders">
         <button
           v-for="(tab, index) in tabs"
           :key="index"
@@ -35,16 +35,14 @@ const onScroll = (event) => {
           {{ tab.title }}
         </button>
       </div>
-      <div class="scrollIndicator">
-        <div class="scrollProgress" :style="{ width: scrollPercentage + '%' }"></div>
-      </div>
-    </div>
+    </aside>
 
     <div class="tabContent">
       <component :is="tabs[activeTab].component" />
     </div>
   </div>
 </template>
+
 
 <style scoped>
 .tabsContainer {
@@ -68,13 +66,13 @@ const onScroll = (event) => {
   background-color: var(--green);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
-/* For edge, chrome */
-.tabHeaders::-webkit-scrollbar {
+
+/* .tabHeaders::-webkit-scrollbar {
   display: none; 
-}
+} */
 
 .tabHeaders button {
   flex: 1;
@@ -108,6 +106,68 @@ const onScroll = (event) => {
 }
 
 .tabContent {
+  padding: 0;
+  padding-bottom: 2rem;
+}
+
+@media all and (min-width: 768px){
+  
+  .tabsContainer {
+  display: flex; 
+  width: 100%;
+  height: 100vh; 
+}
+
+.tabNav {
+  width: 25%; 
+  background-color: var(--green); 
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  border-right: 2px solid var(--gold);
+  box-sizing: border-box; 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+}
+
+.tabHeaders {
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem; 
+}
+
+.tabHeaders button {
+  width: 100%; 
+  padding: 0.8rem 1rem;
+  text-align: left; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--gold);
+  border-left: 4px solid transparent; 
+  transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+.tabHeaders button.active {
+  font-weight: bold;
+  border-left-color: var(--gold); 
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.tabContent {
+  width: 80%; 
+  /* padding: 5rem; */
+  overflow-y: auto; 
+  box-sizing: border-box; 
+}
+}
+
+@media all and (min-width: 1024px){
+  .tabNav{
+    width: 20%;
+  }
 }
 </style>

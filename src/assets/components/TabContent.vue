@@ -11,7 +11,4 @@ defineProps({
 </template>
 
 <style scoped>
-div {
-  background-color: pink;
-}
 </style>
