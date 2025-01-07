@@ -50,6 +50,8 @@ useHead({
 </script>
 
 <template>
+  <main>
+  <div class="snow"></div>
     <Navigation/>
     <section class="heroSec">
       <div class="heroOverlay">
@@ -188,9 +190,11 @@ useHead({
     />
 </section>
    <TheFooter/>
+  </main>
 </template>
 
 <style scoped>
+
 .heroSec {
   position: relative;
   width: 100%;

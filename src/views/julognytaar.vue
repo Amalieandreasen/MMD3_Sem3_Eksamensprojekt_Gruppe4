@@ -1,6 +1,6 @@
 <script setup>
 // Her importeres komponenter som skal bruges, useHead til metadata og onMounted. 
-import {onMounted} from 'vue'; 
+import {onMounted, ref} from 'vue'; 
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
@@ -27,6 +27,7 @@ onMounted(() => {
     // observerer hvert element med klassen explode
     animations.forEach((element) => observer.observe(element));
 });
+
 
 // Her opdateres title og meta description for forsiden ved hjælp af librariet VueUse - Head. link til library: https://github.com/vueuse/head
 useHead({
@@ -670,6 +671,7 @@ useHead({
 
 
 <style scoped>
+
 .heroSec {
   position: relative;
   width: 100%;
