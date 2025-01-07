@@ -14,8 +14,8 @@ const router = createRouter({
     {
       path:"/",
       name: "Sangiovanni",
-      component:homeView
-     },
+      component:homeView,
+    },
    {
     path:"/menukort",
     name: "Menukort",
