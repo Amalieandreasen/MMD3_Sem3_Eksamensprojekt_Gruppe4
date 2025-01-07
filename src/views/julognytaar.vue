@@ -3,6 +3,7 @@ import {onMounted, ref} from 'vue';
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import { useHead } from '@vueuse/head';
 
 
 onMounted(() => {
@@ -19,6 +20,16 @@ onMounted(() => {
     const animations = document.querySelectorAll('.explode');
 
     animations.forEach((element) => observer.observe(element));
+});
+
+useHead({
+  title: 'Jul & nytår',
+  meta: [
+    {
+      name: 'description',
+      content: 'Oplev vores fantastiske julemenu, nytårsmenu ud af huset eller book din plads til nytårsaften hos Sangiovanni',
+    },
+  ],
 });
 
 </script>
@@ -40,7 +51,7 @@ onMounted(() => {
         <p>Fejr julen med eksklusive middage i La Cantina, hvor vi tilbyder specialdesignede menuer for at skabe den perfekte julestemning. Nyd en aften med familie og venner med alt fra velkomstdrinks til en skøn middag akkompagneret af tilpassede vine.
         </p>
         <div class="juleButton">
-            <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
+            <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
         <TheButton title="Se menuen" isPdf="true"/>
     </a>
     </div>
@@ -337,7 +348,9 @@ onMounted(() => {
         <p>Vi åbner dørene kl. 17:30 nytårsaften. Aftenen starter med et glas bobler og snacks, mens vi ser Kongens nytårstale kl. 18:00. Derefter nyder vi en nøje sammensat femretters menu med vinparinger til hver ret. Fortsæt aftenen i ‘IL BAR’ med after dinner drinks, hvor vi byder velkommen til det nye år indtil kl. 02:00.
         </p>
         <div class="nytaarsaftenButtons">
+            <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
             <TheButton title="Se menuen" />
+        </a>
             <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" target="_blank">
             <TheButton title="Book bord" />
             </a>
@@ -635,7 +648,9 @@ onMounted(() => {
         <p>Foretrækker du at fejre nytåret hjemme? Bestil vores komplette nytårsmenu, klar til let færdiggørelse. Menuen leveres med instruktioner og alt nødvendigt for en festlig aften derhjemme. Afhentning er den 31. december fra kl. 11:00 til 14:00.
         </p>
         <div class="nytaarsmenuButtons">
+            <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
         <TheButton title="Se menuen" />
+    </a>
         <TheButton title="Bestil Menu" />
     </div>
 </div>
