@@ -6,6 +6,7 @@ import FocusedEntryPoints from '@/assets/components/FocusedEntryPoints.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import {ref} from 'vue'; 
+import { useHead } from '@vueuse/head';
 
 const focusedEntryPointsBackground2 = "/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "/src/assets/img/forsideDesktop/fepSelskabspakker.png";
@@ -19,6 +20,16 @@ const splideOptions = ref({
   rewind: true,
   perPage: 1, 
   autoHeigt: true, 
+});
+
+useHead({
+  title: 'Selskabspakker',
+  meta: [
+    {
+      name: 'description',
+      content: 'Hos Sangiovanni kan vi holde hvert et arrangement. Vi har lavet selskabspakker for de mest typiske, så kig her og lad dig inspirere',
+    },
+  ],
 });
 
 </script>
@@ -46,7 +57,7 @@ const splideOptions = ref({
     <p>Et helaftensarrangement kan tilpasses til lige dine behov alt efter menuen, hvor mange der skal med og hvilken anledning selskabet skal holdes til. Selskabes kan holdes i vores flotter lokaler i La Cantina</p>
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
+        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
         <TheButton title="Hent brochure om selskaber" :isPdf="true"/>
     </a>
     </div>
@@ -59,7 +70,7 @@ const splideOptions = ref({
     <p> Brylluppet er livets store fest og vi har mange års erfaring med at gøre denne store dag helt jeres. Der er mange ting der skal tages hånd om, og vi hjælper jer gerne hele vejen igennem med sparring og vejledning så I får lige nøjagtig den fest i drømmer om.</p>
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
+        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
         <TheButton title="Læs alt om bryllupspakken" :isPdf="true"/>
     </a>
     </div>
@@ -72,7 +83,7 @@ const splideOptions = ref({
     <p> Konfirmation er en stor dag for det unge menneske, og derfor hjælper vi gerne med at holde en smuk og vellykket fest lige efter jeres behov. Kontakt os i dag, så hjælper vi jer fra start til slut.</p>
     <div class="buttonWrapper">
         <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="/assets/img/julognytaarPdf.pdf" target="_blank">
+        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
         <TheButton title="Læs alt om konfirmationspakken" :isPdf="true"/>
     </a>
     </div>

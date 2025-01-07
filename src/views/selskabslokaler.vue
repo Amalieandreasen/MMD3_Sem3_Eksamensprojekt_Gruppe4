@@ -4,6 +4,7 @@ import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
 import ImageSlider from '@/assets/components/ImageSlider.vue';
 import FocusedEntryPoints from '@/assets/components/FocusedEntryPoints.vue';
+import { useHead } from '@vueuse/head';
 
 import slide1 from '../assets/img/selskabslokalerDesktop/slide1.png';
 import slide2 from '../assets/img/selskabslokalerDesktop/slide2.png';
@@ -30,6 +31,16 @@ const images =[
     {src: slide8, alt:'slide8'},
 
 ];
+
+useHead({
+  title: 'Selskabslokaler',
+  meta: [
+    {
+      name: 'description',
+      content: 'Oplev vores fantastiske selskabslokaler, vi har til hvert et arrangement. Eller bestil Private Dining og prøv en oplevelse ud over det sædvanlige',
+    },
+  ],
+});
 
 
 </script>

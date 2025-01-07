@@ -2,6 +2,7 @@
 import {ref} from 'vue'; 
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
+import { useHead } from '@vueuse/head';
 
 import Navigation from '../assets/components/Navigation.vue';
 import TheButton from '../assets/components/TheButton.vue';
@@ -53,6 +54,16 @@ const isLoading = ref(true);
 setTimeout(() => {
     isLoading.value = false;
 }, 3000);
+
+useHead({
+  title: 'Sangiovanni',
+  meta: [
+    {
+      name: 'description',
+      content: 'Velkommen til Sangiovanni, italiensk restaurant i Aalborg',
+    },
+  ],
+});
 
 </script>
 
@@ -329,6 +340,7 @@ position: absolute;
     background-image: url(../assets/img/SVG/italien.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .reviews{
