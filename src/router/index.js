@@ -52,6 +52,9 @@ const router = createRouter({
     component: julognytarView
    },
   ],
+  scrollBehavior() {
+    return { top: 0 };
+  },
 })
 
 export default router
