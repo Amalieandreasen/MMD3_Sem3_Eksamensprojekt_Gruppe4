@@ -1,14 +1,18 @@
 <script setup>
-import {onMounted, ref} from 'vue'; 
+// Her importeres komponenter som skal bruges, useHead til metadata og onMounted. 
+import {onMounted} from 'vue'; 
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
 import { useHead } from '@vueuse/head';
 
-
+// actions
+// onMounted er et life cycle hook i Vue. Når alt er rendered i DOM'en udføres denne funktion
 onMounted(() => {
 
+    // interSectionObser er et api der overvåger elementer eftersom de kommer ind eller ud af viewporten. På den måde kører SVG animationerne først når brugeren scroller ned til dem.
     const observer = new IntersectionObserver (entries => {
+        // Hvis SVG'en er i viewporter får den tilføjet klassen .inView og kører en gang.
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 entry.target.classList.add('inView');
@@ -17,11 +21,14 @@ onMounted(() => {
         });
     });
 
+    // Finder alle elementerne med klassen explode som er alle paths i svg'en
     const animations = document.querySelectorAll('.explode');
 
+    // observerer hvert element med klassen explode
     animations.forEach((element) => observer.observe(element));
 });
 
+// Her opdateres title og meta description for forsiden ved hjælp af librariet VueUse - Head. link til library: https://github.com/vueuse/head
 useHead({
   title: 'Jul & nytår',
   meta: [
@@ -59,6 +66,7 @@ useHead({
         <img src="../assets/img/julognytarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
     </section>
     <section class="nytaarsAften">
+        <!-- her tilføjes fyrværkeri svg'en direkte i html'en så den kan animeres -->
         <div class="animationWrapper"><svg viewBox="0 0 450 406" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
         d="M182.144 102.058V144.601C182.144 146.426 185.869 146.426 185.869 144.601V102.058C185.869 100.233 182.144 100.233 182.144 102.058Z"
@@ -726,10 +734,13 @@ path.explode{
   transform-origin: center center; 
 }
 
+/* Når inView tilføjes starter animationen */
 path.explode.inView {
     animation: explode 1.5s ease-out forwards;
 }
 
+/* Denne animation skalerer svg
+en fra lille til stor og til almindelig størrelse */
 @keyframes explode{
     0% {
     stroke: var(--gold); 

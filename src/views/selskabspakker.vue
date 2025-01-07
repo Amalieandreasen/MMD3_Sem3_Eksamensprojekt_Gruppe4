@@ -8,6 +8,8 @@ import '@splidejs/splide/dist/css/splide.min.css';
 import {ref} from 'vue'; 
 import { useHead } from '@vueuse/head';
 
+// states
+
 const focusedEntryPointsBackground2 = "/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "/src/assets/img/forsideDesktop/fepSelskabspakker.png";
 const focusedEntryPointsBackground4 = "/src/assets/img/forsideDesktop/fepBar.png"
@@ -21,6 +23,8 @@ const splideOptions = ref({
   perPage: 1, 
   autoHeigt: true, 
 });
+
+// actions
 
 useHead({
   title: 'Selskabspakker',

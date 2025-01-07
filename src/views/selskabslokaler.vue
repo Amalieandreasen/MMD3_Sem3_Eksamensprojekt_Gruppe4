@@ -15,22 +15,26 @@ import slide6 from '../assets/img/selskabslokalerDesktop/slide6.png';
 import slide7 from '../assets/img/selskabslokalerDesktop/slide7.png';
 import slide8 from '../assets/img/selskabslokalerDesktop/slide8.png';
 
+// states
+
 const focusedEntryPointsBackground2 = "/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "/src/assets/img/forsideDesktop/fepSelskabspakker.png";
 const focusedEntryPointsBackground4 = "/src/assets/img/forsideDesktop/fepBar.png"
 
 
 const images =[
-    {src: slide1, alt:'slide1'},
-    {src: slide2, alt:'slide2'},
-    {src: slide3, alt:'slide3'},
-    {src: slide4, alt:'slide4'},
-    {src: slide5, alt:'slide5'},
-    {src: slide6, alt:'slide6'},
-    {src: slide7, alt:'slide7'},
-    {src: slide8, alt:'slide8'},
+    {src: slide1, alt:'Billede af selskabslokale'},
+    {src: slide2, alt:'Billede af selskabslokale'},
+    {src: slide3, alt:'Billede af selskabslokale'},
+    {src: slide4, alt:'Billede af selskabslokale'},
+    {src: slide5, alt:'Billede af selskabslokale'},
+    {src: slide6, alt:'Billede af selskabslokale'},
+    {src: slide7, alt:'Billede af selskabslokale'},
+    {src: slide8, alt:'Billede af selskabslokale'},
 
 ];
+
+actions
 
 useHead({
   title: 'Selskabslokaler',

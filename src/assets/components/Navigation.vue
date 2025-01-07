@@ -2,9 +2,11 @@
 import { ref, onMounted } from 'vue';
 
 // States
+// en variabel der bruger ref som bruges til at se om der er scrollet eller ikke scrollet
 const isScrolled = ref(false);
 
-// Functions
+// actions
+// her tjekkes om brugeren har scrollet ned af siden eller ikke. 
 onMounted(() => {
   window.addEventListener('scroll', () => {
     isScrolled.value = window.scrollY > 0;
@@ -12,8 +14,9 @@ onMounted(() => {
 });
 </script>
 
-
+<!-- inspiration til navigation er taget fra: https://www.youtube.com/watch?v=Iyx_809qwoc&ab_channel=CodingNepal -->
 <template>
+    <!-- hænger sammen med funktionen med eventlisteneren scroll. det er en boolean som dynamisk sætter en klasse på hvis tilstanden isScrolled er true. der sættes baggrund på navigationen når brugerne scroller -->
     <nav :class="{ scrolled: isScrolled }">
       <div class="logo">
         <router-link to="/"><img src="../img/forsideDesktop/logo.png" alt="" /></router-link>
