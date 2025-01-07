@@ -1,38 +1,35 @@
 <script setup>
 const menuItems = [
-  { name: "Lemoncello Spritz", description: "Lemoncello, øko spumante, mineralvand", price: "kr. 98,00" },
-  { name: "Galvanina Spritz", description: "alc. fri", price: "kr. 75,00" },
-  { name: "Hugo Spritz", description: "Hyldeblomstlikør, spumante, mineralvand", price: "kr. 98,00" },
-  { name: "Italian Gin Hass", description: "Italiensk Gin, Mangosirup, citronsodavand", price: "kr. 98,00" },
-  { name: "Italian GT", description: "Italiensk Gin og øko tonic fra Galvanina", price: "kr. 98,00" },
-  { name: "Negroni", description: "Campari, Vermouth, Italiensk Gin", price: "kr. 98,00" },
-  { name: "Spumante Dry øko.", description: "", price: "kr. 85,00 pr. glas" },
-  { name: "Bruschetta med tomat", description: "", price: "kr. 65,00" },
+  { name: "Spumante Dry DOC", description: "Spumante Dry laves på Chardonnay og Glera druer i Veneto regionen i det nordøstlige Italien. Duften er klassisk for mousserende vine fra dette område med fersken, pære, æble og citrus, smagen er tør, men tilført friskhed i form at modne frugter og akacie.", price: "l. Kr. 85,00 1/1 . Kr. 350,00 " },
+
 ];
 </script>
 
 <template>
  <section class="heroSec">
     <div class="imgOverlay">
-      <img src="../img/drinks&snakcksMenuMobil.png" alt="Billede af drinks & Snacks">
+      <img src="../img/vinkortMobil/mousserende.png" alt="Billede af vin">
       <div class="txtOverlay">
-        <h3>Snacks & Drinks</h3>
+        <h3>Mousserende</h3>
       </div>
     </div>
   </section>
   <section class="menuList">
+    <div class="wrapper">
+    <div>
     <div v-for="item in menuItems" :key="item.name" class="menuItem">
-      <div class="menuTxt">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
-      <div class="menuPrice">
-        <p>{{ item.price }}</p>
-      </div>
-    </div>
-    <div class="imgSnacknDrinks">
+  <div class="menuHeader">
+    <h3>{{ item.name }}</h3>
+    <p class="menuPrice">{{ item.price }}</p>
+  </div>
+  <p class="menuTxt">{{ item.description }}</p>
+</div>
+
+</div>
+    <div class="imgHideMobile">
       <img src="../img/drinks&snakcksMenuMobil.png" alt="">
     </div>
+</div>
   </section>
 </template>
 
@@ -79,11 +76,36 @@ const menuItems = [
 
 .menuItem {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; 
   border-bottom: 1px solid var(--gold); 
   padding: 1rem 0;
 }
+
+.menuHeader {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 0.5rem; 
+}
+
+.menuHeader h3 {
+  margin: 0;
+}
+
+.menuHeader .menuPrice {
+  white-space: nowrap; 
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+}
+
+.menuTxt {
+  color: #bbb; 
+  line-height: 1.5; 
+  margin: 0;
+}
+
 
 .menuItem:last-of-type {
   border-bottom: none;
@@ -107,6 +129,10 @@ const menuItems = [
   text-align: right;
 }
 
+.imgHideMobile{
+    display: none;
+}
+
 @media all and (min-width: 768px){
 
   .heroSec {
@@ -123,6 +149,19 @@ const menuItems = [
     object-fit: cover; 
   }
 
+}
+
+@media all and (min-width: 1024px){
+
+    .imgHideMobile{
+    display: block;
+}
+
+.wrapper{
+    display: flex;
+    gap: 2rem; 
+    padding: 1rem;
+}
 }
 </style>
 

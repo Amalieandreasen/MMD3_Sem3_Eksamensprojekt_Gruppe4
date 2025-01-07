@@ -106,7 +106,8 @@ const onScroll = (event) => {
 }
 
 .tabContent {
-  padding-top: 0;
+  padding: 0;
+  padding-bottom: 2rem;
 }
 
 @media all and (min-width: 768px){

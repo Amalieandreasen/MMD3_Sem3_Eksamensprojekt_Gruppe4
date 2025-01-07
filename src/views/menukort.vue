@@ -6,6 +6,9 @@ import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
 import Forretter from '@/assets/components/Forretter.vue';
 import Saesonretter from '@/assets/components/saesonretter.vue';
 
+import Navigation from '../assets/components/Navigation.vue';
+import TheFooter from '@/assets/components/TheFooter.vue';
+
 const menukortTabs = [
   { title: "Sæsonretter", component: Saesonretter },
   { title: "Snacks & Drinks", component: SnacksDrinks },
@@ -22,6 +25,7 @@ const menukortTabs = [
 
 <template>
     <main>
+      <Navigation/>
         <section class="heroSec">
       <div class="heroOverlay">
         <img src="../assets/img/menuDesktop/hero.png" alt="">
@@ -49,6 +53,7 @@ const menukortTabs = [
     </section>
 
 <Tabs :tabs="menukortTabs" title="Udvalg" />
+<TheFooter/>
 </main>
 </template>
 
@@ -119,11 +124,11 @@ const menukortTabs = [
     align-items: center;
   }
 
-  /* Show the image next to the text */
+ 
   .introImg {
-    display: block; /* Display image on larger screens */
-    width: 40%;  /* Adjust width as necessary */
-    margin: 0;  /* Remove margin */
+    display: block; 
+    width: 40%;  
+    margin: 0;  
   }
 
   .introSec p {
