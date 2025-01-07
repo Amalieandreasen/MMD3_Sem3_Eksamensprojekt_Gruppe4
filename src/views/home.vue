@@ -340,6 +340,7 @@ position: absolute;
     background-image: url(../assets/img/SVG/italien.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .reviews{
