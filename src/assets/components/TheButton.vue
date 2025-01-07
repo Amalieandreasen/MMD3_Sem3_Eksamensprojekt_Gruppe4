@@ -39,6 +39,7 @@ button {
   z-index: 1;
   overflow: hidden;
   border: 1px solid var(--gold);
+  max-width: 400px;
 }
 
 button:hover {

@@ -1,8 +1,25 @@
 <script setup>
-import {ref} from 'vue'; 
+import {onMounted, ref} from 'vue'; 
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+
+
+onMounted(() => {
+
+    const observer = new IntersectionObserver (entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('inView');
+                return;
+            }
+        });
+    });
+
+    const animations = document.querySelectorAll('.explode');
+
+    animations.forEach((element) => observer.observe(element));
+});
 
 </script>
 
@@ -320,9 +337,11 @@ import TheFooter from '@/assets/components/TheFooter.vue';
         <p>Vi åbner dørene kl. 17:30 nytårsaften. Aftenen starter med et glas bobler og snacks, mens vi ser Kongens nytårstale kl. 18:00. Derefter nyder vi en nøje sammensat femretters menu med vinparinger til hver ret. Fortsæt aftenen i ‘IL BAR’ med after dinner drinks, hvor vi byder velkommen til det nye år indtil kl. 02:00.
         </p>
         <div class="nytaarsaftenButtons">
+            <TheButton title="Se menuen" />
+            <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" target="_blank">
+            <TheButton title="Book bord" />
+            </a>
             </div>
-        <TheButton title="Se menuen" />
-        <TheButton title="Book bord" />
     </div>
         <img src="../assets/img/julognytaarMobil/nytaarsaften.png" alt="Nytårsaften" srcset="../assets/img/julognytarDesktop/nytaarsaften.png 768w">
     </section>
@@ -626,10 +645,8 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 </main>
 </template>
 
+
 <style scoped>
-a{
-    text-decoration: none;
-}
 .heroSec {
   position: relative;
   width: 100%;
@@ -673,14 +690,15 @@ a{
 
 .animationWrapper svg{
   position: absolute;
-  width: 30%;
+  width: 80%;
   z-index: 10;
   overflow: visible;
+  opacity: 60%;
 }
 
 .nytaarsMenu svg, .nytaarsAften svg{
-    right: 10%;
-    bottom: 50%;
+    left: 10%;
+    bottom: 40%;
 }
 
 .nytaarsAften svg{
@@ -691,7 +709,10 @@ a{
 
 path.explode{
   transform-origin: center center; 
-  animation: explode 1.5s ease-out forwards;
+}
+
+path.explode.inView {
+    animation: explode 1.5s ease-out forwards;
 }
 
 @keyframes explode{
@@ -762,6 +783,32 @@ path.explode{
     .julemenu img, .nytaarsAften img, .nytaarsMenu img{
     width: 50%;
     padding: 1rem;
+}
+
+.nytaarsaftenButtons, .nytaarsmenuButtons{
+    flex-direction:row;
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+.animationWrapper svg{
+    opacity: 100%;
+    width: 30%;
+}
+
+.nytaarsMenu svg, .nytaarsAften svg{
+    left: 70%;
+    bottom: 40%;
+}
+
+.nytaarsAften svg{
+    left: 10%;
+    bottom: 50%;
+}
+
+.juleButton{
+    justify-content: flex-start;
+    margin-left: 2rem;
 }
 
 }

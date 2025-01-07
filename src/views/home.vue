@@ -92,8 +92,12 @@ setTimeout(() => {
         </p>
         <p>Vi anbefaler også vores mest populære pastaret som er Gratineret Cannelloni fyldt med braiseret krondyr og urter. Langtidstegt kærlighed i hjemmelavet pasta. Buon appetito!</p>
         <div class="menuButtons">
+            <router-link to="/menukort">
             <TheButton title="Se menukort"/>
+        </router-link>
+        <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" target="_blank">
             <TheButton title="Book Bord"/>
+        </a>
         </div>
     </div>
         <div class="canneloniBillede">
@@ -104,24 +108,30 @@ setTimeout(() => {
         <ImageSlider :images="images"/>
     </div>
     <section class="focusedWrapper">
+        <router-link to="/selskabsmenu">
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground1
     h3="Selskabsmenu"
     p="Skal du holde et selskab derhjemme, har vi den helt rigtige løsning for dig med vores selskabsmenu ud af huset."
     buttonTitle="Læs mere"
     />
+</router-link>
+<router-link to="/selskabslokaler">
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground2
     h3="Se vores selskabslokaler"
     p="Vi har adskillige flotte selskabslokaler til dit arrangement. Læs mere her og se billeder fra vores La Cantina."
     buttonTitle="Læs mere"
     />
+</router-link>
+<router-link to="/selskabspakker">
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground3
     h3="Selskabspakker & møder"
     p="Vi tilbyder skrædersyet selskabspakker til dit næste møde eller arrangement. Mad, drikke og lokale samlet et sted."
     buttonTitle="Læs mere"
     />
+</router-link>
 </section>
 <section class="reviews">
     <h2>Hvad siger vores kunder</h2>
@@ -315,6 +325,12 @@ position: absolute;
     width: 100%;
 }
 
+.canneloniContent{
+    background-image: url(../assets/img/SVG/italien.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .reviews{
     background-color: var(--green);
     padding: 2rem;
@@ -355,10 +371,20 @@ position: absolute;
     margin-bottom: 1rem;
 }
 
+.menuButtons{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 2rem;
+    gap: 1rem;
+    margin-inline: 2rem;
+}
+
 
 @media all and (min-width: 768px){
 .firstSection{
     display: flex;
+    margin-inline: 5rem;
 }
 
 .familienContent, .canneloniContent{
@@ -368,6 +394,7 @@ position: absolute;
 .secondSection{
     display: flex;
     flex-direction: row-reverse;
+    margin-inline: 5rem;
 }
 
 .familienbillede, .canneloniBillede, .menuButtons{
@@ -377,6 +404,7 @@ position: absolute;
 .focusedWrapper{
     display: flex;
     justify-content: center;
+    margin-block: 5rem;
 }
 
 .posts{
@@ -387,6 +415,11 @@ position: absolute;
 
 iframe{
     max-width: 30vw;
+}
+
+.menuButtons{
+
+    flex-direction: row;
 }
 }
 </style>
