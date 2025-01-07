@@ -1,8 +1,25 @@
 <script setup>
-import {ref} from 'vue'; 
+import {onMounted, ref} from 'vue'; 
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+
+
+onMounted(() => {
+
+    const observer = new IntersectionObserver (entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('inView');
+                return;
+            }
+        });
+    });
+
+    const animations = document.querySelectorAll('.explode');
+
+    animations.forEach((element) => observer.observe(element));
+});
 
 </script>
 
@@ -628,10 +645,8 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 </main>
 </template>
 
+
 <style scoped>
-a{
-    text-decoration: none;
-}
 .heroSec {
   position: relative;
   width: 100%;
@@ -694,7 +709,10 @@ a{
 
 path.explode{
   transform-origin: center center; 
-  animation: explode 1.5s ease-out forwards;
+}
+
+path.explode.inView {
+    animation: explode 1.5s ease-out forwards;
 }
 
 @keyframes explode{

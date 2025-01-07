@@ -328,6 +328,7 @@ position: absolute;
 .canneloniContent{
     background-image: url(../assets/img/SVG/italien.svg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .reviews{
