@@ -24,7 +24,7 @@ const menukortTabs = [
       <Navigation/>
         <section class="heroSec">
       <div class="heroOverlay">
-        <img src="../assets/img/vinkortMobil/hero.png" alt="">
+        <img src="../assets/img/vinkortMobil/hero.png" alt="Vin" srcset="../assets/img/vinkortDesktop/hero.png 768w">
         <div class="heroText">
           <h1>Vinkort</h1>
         </div>

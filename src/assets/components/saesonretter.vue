@@ -141,7 +141,7 @@ const menuItemsFK = [
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -225,6 +225,10 @@ const menuItemsFK = [
 @media all and (min-width: 1024px){
   .deskImg{
     display: block;
+  }
+
+  .deskImg img{
+    border-radius: 12px;
   }
 }
 

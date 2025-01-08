@@ -1,28 +1,19 @@
 <script setup>
 const menuItems = [
-    { name: "Trebbiano dAbruzzo Bove DOC ", description: `
-Familien Bove har dyrket vin i den midt-Italienske Abruzzo region siden 1800-tallet, men har først selv
-startet en vin produktion i 1960erne. Vinen her laves på Trebbiano druer tilsat ca. 10% chardonnay. Lys
-gul farve med grønne reekser. Næse med n frugtighed og blomster og i munden præsenteres en delikat
-smagsfylde og friskhed. En tiltalende og let, tør hvidvin.
-`, price: " gl. kr. 75,00 ½. Kr. 150,00 1/1 . Kr. 298,00" },
-
-    { name: "Chardonnay Alpha Zeta IGT", description: `Alpha Zeta ligger i den nordøstlige Veneto region som er kendte for bla. Amarone. Denne vin er lavet
-100% på Chardonnay druer. Duften har noter af æble og pære. Smagen er tør, let fedme og harmonisk
-afslutning med sprød syre.`, price: "gl. kr. 85,00 1/1 . Kr. 345,00 " },
-
-    { name: "Pinot Grigio ”Terrapieno” Alpha Zeta IGT", description: `Alpha Zeta ligger i den nordøstlige Veneto region som er kendte for bla. Amarone. Denne vin er lavet
-100% på Pinot Grigio druer fra marken Terrapieno. Duften har grønne noter af blomst, drue og akacie,
-smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " },
+  { name: "Bohemian Pils fadøl/draft 5% alc. 0,3l", description: "En traditionel pilsner på 5% vol., der har en ot gylden farve. Smagsmæssigt har Bohemian Pilsner et nt udtryk af korn og ristet brød. En øl der byder på en behagelig medium bitterhed med et skarpt aromatisk udtryk fra den tilsatte Saaz humle.", price: "kr. 89,00" },
+  { name: "Vienna Lager fadøl/draft 5,4% alc. 0,3l", description: "Vienna Lager er Canediguerras hyldest til en af Europas mest klassiske øltyper. I Danmark kender vi den ravfarvede Vienna Lager som en Classic - en lagerøl som smager dejligt af karamel. Denne øl er på 5,4% vol., og har en ren og mild smag, hvor man nænsomt har tilføjet humle, så de sarte noter af karamel kan træde frem.", price: "kr. 89,00" },
+  { name: "American IPA 33 cl. flaske 6.7% alc.", description: "En betagende IPA med stor bitterhed. I denne øl har man udelukkende tilsat amerikanske humletyper der giver en forfriskende og distinkt frugtig øl med meget mundfylde.", price: "kr. 72,00" },
+  { name: "Vienna Lager fadøl/draft 5,4% alc. 0,3l", description: "Vienna Lager er Canediguerras hyldest til en af Europas mest klassiske øltyper. I Danmark kender vi den ravfarvede Vienna Lager som en Classic - en lagerøl som smager dejligt af karamel. Denne øl er på 5,4% vol., og har en ren og mild smag, hvor man nænsomt har tilføjet humle, så de sarte noter af karamel kan træde frem.", price: "kr. 72,00" },
 ];
 </script>
 
 <template>
  <section class="heroSec">
     <div class="imgOverlay">
-      <img src="../img/vinkortMobil/mousserende.png" alt="Billede af vin">
+        <!-- VIRKER IKKE -->
+        <img src="../assets/img/drikkevarerMobil/italienskeOl.png" alt="Italiensk Ol" srcset="../assets/img/drikkevarerDesktop/italienskeOlHero.png 768w">
       <div class="txtOverlay">
-        <h3>Hvidvin</h3>
+        <h3>Italiensk Øl</h3>
       </div>
     </div>
   </section>
@@ -38,9 +29,6 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
 </div>
 
 </div>
-    <div class="imgHideMobile">
-      <img src="../img/drinks&snakcksMenuMobil.png" alt="">
-    </div>
 </div>
   </section>
 </template>
@@ -125,6 +113,7 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
 
 .menuTxt h3 {
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .menuTxt p {
