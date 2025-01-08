@@ -1,15 +1,18 @@
 <script setup>
+// import af ref, Splide for at der kan laves billedesliders, Splides css og useHead til at definere metadata
 import {ref} from 'vue'; 
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { useHead } from '@vueuse/head';
 
+// Her importeres de forskellige components som skal bruges på siden
 import Navigation from '../assets/components/Navigation.vue';
 import TheButton from '../assets/components/TheButton.vue';
 import ImageSlider from '../assets/components/ImageSlider.vue';
 import FocusedEntryPoints from '@/assets/components/FocusedEntryPoints.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
 
+// Her importeres billederne som skal bruge i billede slideren. 
 import slide1 from '../assets/img/forsideDesktop/slide1.png';
 import slide2 from '../assets/img/forsideDesktop/slide2.png';
 import slide3 from '../assets/img/forsideDesktop/slide3.png';
@@ -19,22 +22,26 @@ import slide6 from '../assets/img/forsideDesktop/slide6.png';
 import slide7 from '../assets/img/forsideDesktop/slide7.png';
 
 // States
+// Her defineres h1 som en reaktiv variabel. Dette gør at den er dynamisk og kan ændres.
 const h1 = ref("Autentisk italiensk restaurant i Aalborg")
 
+// Her defineres et array af billeder som bruges til billede slideren.
 const images =[
-    {src: slide1, alt:'slide1'},
-    {src: slide2, alt:'slide2'},
-    {src: slide3, alt:'slide3'},
-    {src: slide4, alt:'slide4'},
-    {src: slide5, alt:'slide5'},
-    {src: slide6, alt:'slide6'},
-    {src: slide7, alt:'slide7'},
+    {src: slide1, alt:'Billede af forret'},
+    {src: slide2, alt:'Billede af pastaret'},
+    {src: slide3, alt:'Billede af pizza'},
+    {src: slide4, alt:'Billede af forret'},
+    {src: slide5, alt:'Billede af pizza'},
+    {src: slide6, alt:'Billede af pastaret'},
+    {src: slide7, alt:'Billede af risotto'},
 ];
 
+// Her hentes billederne til focused entry points
 const focusedEntryPointsBackground1 = "/src/assets/img/forsideDesktop/fepSelskabsmenu.png";
 const focusedEntryPointsBackground2 = "/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "/src/assets/img/forsideDesktop/fepSelskabspakker.png";
 
+// Her defineres de muligheder som vi har ved at bruge splide til vores billede slider. her sættes blandt andet at der kun skal vises et billede på små skærme, den skal selv skifte slide og skal starte forfra. link til splide.js: https://splidejs.com/
 const splideOptions = ref({
   autoplay: true,
   slidesToScroll:1,
@@ -49,12 +56,16 @@ const splideOptions = ref({
   },
 });
 
+// Her sættes en variabel som kan skifte imellem false og true som bruges på loading screenenn.
 const isLoading = ref(true);
 
+// actions
+// her laves en funktion der bruges til loading screenen. den simluere en loading fase på 3 sekunder. når de 3 sekunder er ovre bliver isLoading sat til false.
 setTimeout(() => {
     isLoading.value = false;
 }, 3000);
 
+// Her opdateres title og meta description for forsiden ved hjælp af librariet VueUse - Head. link til library: https://github.com/vueuse/head
 useHead({
   title: 'Sangiovanni',
   meta: [
@@ -68,7 +79,9 @@ useHead({
 </script>
 
 <template>
+    <!-- Her bruges vues inbyggede component transition til at lave loading screenen og få den til at fade ud når loading screenen afsluttes. dette gøres med css.  -->
     <Transition name="fade">
+        <!-- v-if er et vue directive som her bruges til at vise loadingScreenen hvis isLoading er true -->
       <div v-if="isLoading" class="loadingScreen">
         <div class="spinner">
             <img src="../assets/img/SVG/pizza.svg" alt="pizza">
@@ -79,17 +92,20 @@ useHead({
       </div>
     </Transition>
     <Transition name="fade">
+        <!-- ! betyder ikke, så dette vises når isLoading er false -->
         <div v-if="!isLoading">
+            <!-- Her indsættes navigations Componentet -->
     <Navigation/>
     <section class="hero">
         <video muted loop autoplay src="../assets/img/forsideDesktop/heroVideo.mp4"></video>
         <div class="heroOverlay"></div>
+        <!-- Her indsættes h1 som blev lavet med ref -->
         <h1>{{ h1 }}</h1>
     </section>
     <section class="firstSection">
         <div class="familienContent">
         <h2>Vi skaber unikke oplevelser - hver dag</h2>
-        <p>Siden 1988 har SanGiovanni været en familiedrevet restaurant med fokus på autentisk italiensk mad og gæstfrihed. Grundlagt af Benthe og Giovanni Volpi, er restauranten vokset gennem generationer og tilbyder i dag både Trattoria & Pizzeria, den italienske bar “il Bar,” selskabslokaler og vinkælderen La Cantina. Med rødder i italienske traditioner og en passion for kvalitet, skaber vi unikke oplevelser for vores gæster – hver dag.
+        <p>Siden 1988 har SanGiovanni været en familiedrevet restaurant med fokus på autentisk italiensk mad og gæstfrihed. Grundlagt af Benthe og Giovanni Volpi, er restauranten vokset gennem generationer og tilbyder i dag både Trattoria & Pizzeria, den italienske bar “il Bar,” selskabslokaler og vinkælderen La Cantina. Med rødder i italienske traditioner og en passion for kvalitet, skaber vi unikke oplevelser for vores gæster - hver dag.
         </p>
     </div>
         <div class="familienbillede">
@@ -103,6 +119,7 @@ useHead({
         </p>
         <p>Vi anbefaler også vores mest populære pastaret som er Gratineret Cannelloni fyldt med braiseret krondyr og urter. Langtidstegt kærlighed i hjemmelavet pasta. Buon appetito!</p>
         <div class="menuButtons">
+            <!-- Her indsættes routerLinks rundt om TheButton komponentet. -->
             <router-link to="/menukort">
             <TheButton title="Se menukort"/>
         </router-link>
@@ -115,11 +132,13 @@ useHead({
         <img src="../assets/img/forsideMobil/canneloni.png" alt="Familen Volpi" srcset="../assets/img/forsideDesktop/canneloni.png 768w">
     </div>
     </section>
+    <!-- Her indsættes billede slideren fra komponentet. Her bruges v-bind til at vise de billeder som blev hentet ind i states.  -->
     <div class="imageslider">
         <ImageSlider :images="images"/>
     </div>
     <section class="focusedWrapper">
         <router-link to="/selskabsmenu">
+            <!-- Her hentes hver Focused Entry Point. her er der defineret props i komponentet som gør at der kan indsættes billede, titel, tekst og en titel til knappen på den side de skal bruges -->
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground1
     h3="Selskabsmenu"
@@ -146,8 +165,10 @@ useHead({
 </section>
 <section class="reviews">
     <h2>Hvad siger vores kunder</h2>
+    <!-- Her bruges splide js librariet til at lave anmeldelse sektionen. Hver SplideSlide er en anmeldelse. -->
+     <!-- Her bruges v-bind til at hente mulighederne som blev defineret i script. -->
     <Splide :options="splideOptions">
-    <SplideSlide >
+    <SplideSlide>
         <h3>Simon Løvstrup</h3>
         <div class="stars">
             <img src="../assets/img/SVG/stjerne.svg" alt="stjerne">
@@ -242,6 +263,7 @@ useHead({
     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsangiovanniaalborg%2Fposts%2Fpfbid0GEZXF4NWEfP8wqFUtuTWubvwCzENvYqiqVYLtMae23kBc4oSFDNegT7z1jtioposl&show_text=false&width=500" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
 </article>
+<!-- Her indsættes footer komponentet -->
 <TheFooter/>
  </div>
 </Transition>
@@ -249,7 +271,9 @@ useHead({
 </template>
 
 <style scoped>
-.face-enter-active, .fade-leave-active{
+/* Dette csss bruges sammen med vue transition komponentet */
+/* loading screenen vil starte med opacity 0 (fade-enter-from) herefter fader loading screenen frem (fade-enter-active). når elementet fjernes fader loading screenen ud (fade-leave-active) og til sidst bliver den skult med opacity 0 (fade-leave-to) */
+.fade-enter-active, .fade-leave-active{
 transition: opacity 1s ease-in-out;
 position: absolute;
   top: 0;
