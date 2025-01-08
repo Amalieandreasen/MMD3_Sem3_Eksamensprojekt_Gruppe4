@@ -1,13 +1,9 @@
 <script setup>
 const menuItems = [
-  { name: "Lemoncello Spritz", description: "Lemoncello, øko spumante, mineralvand", price: "kr. 98,00" },
-  { name: "Galvanina Spritz", description: "alc. fri", price: "kr. 75,00" },
-  { name: "Hugo Spritz", description: "Hyldeblomstlikør, spumante, mineralvand", price: "kr. 98,00" },
-  { name: "Italian Gin Hass", description: "Italiensk Gin, Mangosirup, citronsodavand", price: "kr. 98,00" },
-  { name: "Italian GT", description: "Italiensk Gin og øko tonic fra Galvanina", price: "kr. 98,00" },
-  { name: "Negroni", description: "Campari, Vermouth, Italiensk Gin", price: "kr. 98,00" },
-  { name: "Spumante Dry øko.", description: "", price: "kr. 85,00 pr. glas" },
-  { name: "Bruschetta med tomat", description: "", price: "kr. 65,00" },
+  { name: "Sodavand", description: "Pepsi, Pepsi Max, Faxe Kondi, Mirinda appelsin", price: " 50cl. kr. 59,00 / 70 cl. kr. 72,00" },
+  { name: "Tea Freddo - Galvanina	", description: "Fersken Iste fra Galvanina øko", price: "35,5 cl. kr. 59,00" },
+  { name: "Acqua Communale Naturale / Frizzante", description: "Kulltreret vand - med eller uden uden brus", price: "70 cl. Kr. 45,00" },
+  { name: "Italienske økologiske sodavand Galvanina", description: "Italian BIO lemonade from Galvanina - Lemon, Mandarin, Red-orange, Pomegranate ", price: "35,5 cl. kr. 59,00" },
 ];
 </script>
 
@@ -16,7 +12,7 @@ const menuItems = [
     <div class="imgOverlay">
       <img src="../img/drinks&snakcksMenuMobil.png" alt="Billede af drinks & Snacks">
       <div class="txtOverlay">
-        <h3>Forretter</h3>
+        <h3>Kolde drikkevarer</h3>
       </div>
     </div>
   </section>
@@ -88,6 +84,7 @@ const menuItems = [
 
 .menuTxt h3 {
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .menuTxt p {
@@ -101,6 +98,24 @@ const menuItems = [
   font-size: 1rem;
   font-weight: bold;
   text-align: right;
+}
+
+@media all and (min-width: 768px){
+
+  .heroSec {
+    height: 20vh; 
+    max-height: 300px; 
+  }
+
+  .imgOverlay {
+    height: 100%; 
+  }
+
+  .imgOverlay img {
+    height: 100%;
+    object-fit: cover; 
+  }
+
 }
 </style>
 
