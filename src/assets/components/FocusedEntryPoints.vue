@@ -67,10 +67,6 @@ defineProps({
 }
 
 @media all and (min-width: 768px){
-  .entryPoint{
-    max-width: 25vw;
-}
-
 .entryPointContent{
   height: 400px;
   max-width: 100%;

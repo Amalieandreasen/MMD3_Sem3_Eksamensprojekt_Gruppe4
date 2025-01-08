@@ -72,7 +72,7 @@ useHead({
 </svg>
     </div>
 </div>
-        <img src="../assets/img/julognytarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
+        <img src="../assets/img/julognytaarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
     </section>
     <section class="nytaarsAften">
         <!-- her tilføjes fyrværkeri svg'en direkte i html'en så den kan animeres -->
@@ -884,14 +884,14 @@ path.explode.inView {
   width: 300px; 
 }
 
-@media all and (min-width: 2000px){
+@media all and (min-width: 1800px){
    
 .julemand{
     width: 500px;
 }
 
 .julemenu, .nytaarsAften, .nytaarsMenu{
-    margin-inline: 15rem;
+    margin-inline: 20rem;
 }
 }
 }

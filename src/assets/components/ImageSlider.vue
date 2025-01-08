@@ -44,4 +44,11 @@ const splideOptions = ref({
 
 <style scoped>
 
+.splide__slide img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+
 </style>

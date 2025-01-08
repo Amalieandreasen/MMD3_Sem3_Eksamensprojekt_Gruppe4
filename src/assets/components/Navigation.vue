@@ -160,6 +160,33 @@ nav ul ul li a:hover{
     padding: 10px;
     box-shadow: none;
 }
+@media all and (min-width:1024px){
+    nav a{
+        font-size: 13px;
+    }
+
+    nav .logo img{
+        width: 170px;
+    }
+
+    .book{
+        font-size: 13px;
+    }
+}
+
+@media all and (min-width:1300px){
+    nav a{
+        font-size: 20px;
+    }
+
+    nav .logo img{
+        width: 200px;
+    }
+
+    .book{
+        font-size: 20px;
+    }
+}
 
 @media all and (max-width: 1024px){
     nav ul{
@@ -224,6 +251,17 @@ nav ul ul li a:hover{
     display: block;
 
 }
+}
+
+@media all and (min-width:1800px){
+    nav{
+        justify-content: space-around;
+        margin-top: -200px;
+    }
+
+    nav .logo img{
+        width: 350px;
+    }
 }
 
 </style>
