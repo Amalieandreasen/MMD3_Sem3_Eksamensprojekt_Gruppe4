@@ -380,6 +380,13 @@ position: absolute;
     width: 100%;
 }
 
+.familienContent{
+    background-image: url(../assets/img/SVG/vinmark.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
 .canneloniContent{
     background-image: url(../assets/img/SVG/italien.svg);
     background-size: contain;
