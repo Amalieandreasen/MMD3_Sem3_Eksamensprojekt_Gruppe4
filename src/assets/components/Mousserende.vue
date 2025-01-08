@@ -161,6 +161,7 @@ const menuItems = [
     display: flex;
     gap: 2rem; 
     padding: 1rem;
+    justify-content: center;
 }
 }
 </style>

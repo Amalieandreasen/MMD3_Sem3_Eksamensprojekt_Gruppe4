@@ -172,6 +172,7 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
     display: flex;
     gap: 2rem; 
     padding: 1rem;
+    justify-content: center;
 }
 }
 </style>
