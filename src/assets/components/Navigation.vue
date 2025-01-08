@@ -1,4 +1,5 @@
 <script setup>
+import Selskabsmenu from '@/views/selskabsmenu.vue';
 import { ref, onMounted } from 'vue';
 
 // States
@@ -43,6 +44,7 @@ onMounted(() => {
             <li><router-link to="/selskabspakker">Selskabspakker & møder</router-link></li>
             <li><router-link to="/selskabslokaler">Se vores selskabslokaler</router-link></li>
             <li><router-link to="/selskabsmenu">Selskabsmenu ud af huset</router-link></li>
+            <li><router-link :to="{ path: '/selskabslokaler', hash: '#anchor' }">Private Dining</router-link></li>
           </ul>
         </li>
         <li><a href="#">IL Bar</a></li>

@@ -57,9 +57,17 @@ const router = createRouter({
    },
   ],
   // scrollBehavior er en funktion  i vue som skal bruges når man navigerer imellem siderne. her defineres at når der trykkes på et routerlink skal man føres til toppen på den view man går ind på, så man ikke ender på samme punkt på den nye side.
-  scrollBehavior() {
+  // For at vi kan lave et anchor link til private dining bliver vi nødvendigt bruge en hash i vores scrollbehavior for at vi kan få et #anchor i url'en. 
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
     return { top: 0 };
-  },
+  }
+  
 })
 
 export default router

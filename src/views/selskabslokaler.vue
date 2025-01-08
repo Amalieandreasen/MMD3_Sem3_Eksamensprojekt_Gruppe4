@@ -106,7 +106,7 @@ useHead({
     <div class="imageslider">
         <ImageSlider :images="images"/>
     </div>
-    <section class="privateDining">
+    <section class="privateDining" id="anchor">
         <div class="text">
             <h2>Private Dining i La Cantina</h2>
             <p>Private Dining er en oplevelse for dig der ønsker en særlig oplevelse. Her har du muligheden for at sidde i vores Private Dining lokaler i La Cantina og nyde en ekslusiv aften. Der er ikke et minimum antal gæster dog skal omsætningen være på minimum kr. 10000,00 før vi åbner.</p>
