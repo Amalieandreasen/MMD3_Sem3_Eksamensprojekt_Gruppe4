@@ -777,13 +777,10 @@ path.explode{
   transform-origin: center center; 
 }
 
-/* Når inView tilføjes starter animationen */
 path.explode.inView {
     animation: explode 1.5s ease-out forwards;
 }
 
-/* Denne animation skalerer svg
-en fra lille til stor og til almindelig størrelse */
 @keyframes explode{
     0% {
     stroke: var(--gold); 
