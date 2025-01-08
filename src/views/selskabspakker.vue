@@ -354,4 +354,18 @@ color: var(--background);
 
 }
 
+@media all and (min-width: 1800px){
+    .helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken, .intro{
+        margin-inline: 20rem;
+    }
+
+    .menuSlider{
+        padding-inline: 20rem;
+    }
+
+    .focusedWrapper{
+    margin-inline: 20rem;
+   }
+}
+
 </style>

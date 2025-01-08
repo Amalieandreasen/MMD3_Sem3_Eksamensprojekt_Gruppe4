@@ -34,7 +34,7 @@ const images =[
 
 ];
 
-actions
+// actions
 
 useHead({
   title: 'Selskabslokaler',
@@ -51,7 +51,6 @@ useHead({
 
 <template>
   <main>
-  <div class="snow"></div>
     <Navigation/>
     <section class="heroSec">
       <div class="heroOverlay">
@@ -327,7 +326,8 @@ useHead({
 
 @media all and (min-width: 768px){
     .intro{
-        margin-inline: 5rem;
+        margin-inline: 10rem;
+        margin-block: 5rem;
     }
 
     .lokaler{
@@ -357,5 +357,19 @@ useHead({
     justify-content: center;
     margin-block: 5rem;
 }
+}
+
+@media all and (min-width: 1800px){
+ .laCantina, .stueEtagen, .privateDining, .priser{
+        padding-inline: 20rem;
+    }
+
+    .intro{
+      margin-inline: 30rem;
+    }
+
+    .focusedWrapper{
+    margin-inline: 20rem;
+   }
 }
 </style>

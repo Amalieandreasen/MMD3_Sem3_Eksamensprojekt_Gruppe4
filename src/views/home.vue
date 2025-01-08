@@ -1,6 +1,6 @@
 <script setup>
 // import af ref, Splide for at der kan laves billedesliders, Splides css og useHead til at definere metadata
-import {ref} from 'vue'; 
+import {ref, onMounted} from 'vue'; 
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { useHead } from '@vueuse/head';
@@ -60,10 +60,26 @@ const splideOptions = ref({
 const isLoading = ref(true);
 
 // actions
-// her laves en funktion der bruges til loading screenen. den simluere en loading fase på 3 sekunder. når de 3 sekunder er ovre bliver isLoading sat til false.
-setTimeout(() => {
-    isLoading.value = false;
-}, 3000);
+
+
+onMounted(() => {
+    // I denne onMounted gør jeg at loading kun ses en gang for hver session. LoadingComplete er det som skal sættes inde i sessionStorage og derfor prøver vi først aat se om det er derinde
+    const loadingComplete = sessionStorage.getItem('loadingComplete');
+    const loadingScreen = document.querySelector(".loadingScreen")
+
+    if (!loadingComplete) {
+        // Hvis ikke der kan findes loading complete så kører den loadingscreenen og efterfølgende bliver
+        setTimeout(() => {
+            sessionStorage.setItem('loadingComplete', 'true');
+            isLoading.value = false;
+        }, 3000);
+        // hvis den fandt loadingComplete sættes isloading til false og loading screenen fjernes
+    } else {
+        isLoading.value = false;
+        loadingScreen.style.display = 'none';
+    }
+});
+
 
 // Her opdateres title og meta description for forsiden ved hjælp af librariet VueUse - Head. link til library: https://github.com/vueuse/head
 useHead({
@@ -91,7 +107,7 @@ useHead({
     </div>
       </div>
     </Transition>
-    <Transition name="fade">
+    <Transition name="fade" class="fadeTransition">
         <!-- ! betyder ikke, så dette vises når isLoading er false -->
         <div v-if="!isLoading">
             <!-- Her indsættes navigations Componentet -->
@@ -280,10 +296,12 @@ position: absolute;
   left: 0;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .fade-enter-from, .fade-leave-to{
     opacity: 0;
+    overflow-x: hidden;
 }
 
 .loadingScreen {
@@ -293,12 +311,14 @@ position: absolute;
   align-items: center;
   height: 100vh;
   background-color: var(--green);
+  overflow-x: hidden;
 }
 
 .spinner img{
     animation: spin 2s linear infinite;
     width: 150px;
     transform-origin: center;
+    overflow-x: hidden;
 }
 
 @keyframes spin {
@@ -417,7 +437,7 @@ position: absolute;
 }
 
 
-@media all and (min-width: 768px){
+@media all and (min-width: 1024px){
 .firstSection{
     display: flex;
     margin-inline: 5rem;
@@ -458,4 +478,19 @@ iframe{
     flex-direction: row;
 }
 }
+
+@media all and (min-width: 1800px){
+   
+   .firstSection, .secondSection {
+       margin-inline: 20rem;
+   }
+
+   .focusedWrapper{
+    margin-inline: 20rem;
+   }
+
+   .reviews{
+    padding-inline: 20rem;
+   }
+   }
 </style>

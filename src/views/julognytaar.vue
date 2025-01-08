@@ -884,14 +884,14 @@ path.explode.inView {
   width: 300px; 
 }
 
-@media all and (min-width: 2000px){
+@media all and (min-width: 1800px){
    
 .julemand{
     width: 500px;
 }
 
 .julemenu, .nytaarsAften, .nytaarsMenu{
-    margin-inline: 15rem;
+    margin-inline: 20rem;
 }
 }
 }

@@ -104,6 +104,7 @@ button{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 align-items: baseline;
+justify-items: center;
 }
 
 .logo{
@@ -112,10 +113,20 @@ align-items: baseline;
     align-items: center;
 }
 
-.kontant{
-    align-items:end;
+.kontakt{
+    align-items:flex-end !important;
 }
 
+.lokation h2{
+    text-align: left;
+}
+
+}
+
+@media all and (min-width: 1800px){
+    footer{
+        padding-inline: 20rem;
+    }
 }
 
 </style>
