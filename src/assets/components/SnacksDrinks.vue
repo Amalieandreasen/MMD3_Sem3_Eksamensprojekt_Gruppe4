@@ -123,6 +123,18 @@ const menuItems = [
     object-fit: cover; 
   }
 
+  .menuList{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+}
+
+@media all and (min-width: 1800px){
+  .menuList{
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
 }
 </style>
 
