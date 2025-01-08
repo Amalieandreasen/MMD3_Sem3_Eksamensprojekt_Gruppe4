@@ -26,9 +26,9 @@ const menuItems = [
 </div>
 
 </div>
-    <div class="imgHideMobile">
+    <!-- <div class="imgHideMobile">
       <img src="../img/drinks&snakcksMenuMobil.png" alt="">
-    </div>
+    </div> -->
 </div>
   </section>
 </template>

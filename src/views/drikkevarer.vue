@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
-import Forretter from '@/assets/components/Forretter.vue';
 import ItalienskOl from '@/assets/components/ItalienskOl.vue';
 import KoldeDrikkevarer from '@/assets/components/KoldeDrikkevarer.vue';
 
@@ -11,7 +10,7 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 const menukortTabs = [
   { title: "Italienske Øl", component: ItalienskOl },
   { title: "Kolde drikkevarer", component: KoldeDrikkevarer },
-  { title: "Kaffe", component: Forretter },
+  { title: "Kaffe", component: "Forretter" },
   { title: "Likør", component: "Forret" }
 ];
 

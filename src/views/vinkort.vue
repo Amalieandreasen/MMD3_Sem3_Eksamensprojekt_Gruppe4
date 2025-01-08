@@ -2,8 +2,6 @@
 import TheButton from '@/assets/components/TheButton.vue';
 import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
-import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
-import Forretter from '@/assets/components/Forretter.vue';
 import Mousserende from '@/assets/components/Mousserende.vue';
 import Hvidvin from '@/assets/components/Hvidvin.vue';
 
@@ -13,7 +11,7 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 const menukortTabs = [
   { title: "Mousserende", component: Mousserende },
   { title: "Hvidvin", component: Hvidvin },
-  { title: "Rødvin", component: Forretter },
+  { title: "Rødvin", component: "Rødvin" },
   { title: "Rosé Vin", component: "Forret" }
 ];
 

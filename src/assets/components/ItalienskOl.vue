@@ -94,7 +94,6 @@ const menuItems = [
 
 .menuHeader .menuPrice {
   white-space: nowrap; 
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
   margin: 0;
@@ -104,6 +103,7 @@ const menuItems = [
   color: #bbb; 
   line-height: 1.5; 
   margin: 0;
+  max-width: 75ch;
 }
 
 
@@ -113,18 +113,15 @@ const menuItems = [
 
 .menuTxt h3 {
   margin: 0;
-  font-size: 1.2rem;
 }
 
 .menuTxt p {
   margin: 0;
-  font-size: 0.9rem;
   color: #bbb; 
 }
 
 .menuPrice p {
   margin: 0;
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
 }
@@ -161,6 +158,7 @@ const menuItems = [
     display: flex;
     gap: 2rem; 
     padding: 1rem;
+    justify-content: center;
 }
 }
 </style>

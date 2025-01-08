@@ -84,18 +84,16 @@ const menuItems = [
 
 .menuTxt h3 {
   margin: 0;
-  font-size: 1.2rem;
 }
+
 
 .menuTxt p {
   margin: 0;
-  font-size: 0.9rem;
   color: #bbb; 
 }
 
 .menuPrice p {
   margin: 0;
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
 }
@@ -116,6 +114,13 @@ const menuItems = [
     object-fit: cover; 
   }
 
+}
+
+@media all and (min-width: 1800px){
+  .menuList{
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
 }
 </style>
 

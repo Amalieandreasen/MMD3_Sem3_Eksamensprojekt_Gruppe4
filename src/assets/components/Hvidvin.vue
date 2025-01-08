@@ -38,9 +38,9 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
 </div>
 
 </div>
-    <div class="imgHideMobile">
+    <!-- <div class="imgHideMobile">
       <img src="../img/drinks&snakcksMenuMobil.png" alt="">
-    </div>
+    </div> -->
 </div>
   </section>
 </template>

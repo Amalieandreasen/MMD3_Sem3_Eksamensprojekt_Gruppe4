@@ -3,7 +3,6 @@ import TheButton from '@/assets/components/TheButton.vue';
 import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
-import Forretter from '@/assets/components/Forretter.vue';
 import Saesonretter from '@/assets/components/saesonretter.vue';
 
 import Navigation from '../assets/components/Navigation.vue';
@@ -12,7 +11,7 @@ import TheFooter from '@/assets/components/TheFooter.vue';
 const menukortTabs = [
   { title: "Sæsonretter", component: Saesonretter },
   { title: "Snacks & Drinks", component: SnacksDrinks },
-  { title: "Forretter", component: Forretter },
+  { title: "Forretter", component: "Forretter" },
   { title: "Pasta", component: "Forret" },
   { title: "Kød", component: "Forret" },
   { title: "Tilbehør", component: "Forret" },
