@@ -72,7 +72,7 @@ useHead({
 </svg>
     </div>
 </div>
-        <img src="../assets/img/julognytarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
+        <img src="../assets/img/julognytaarMobil/julemenu.png" alt="Julemenu" srcset="../assets/img/julognytarDesktop/julemenu.png 768w">
     </section>
     <section class="nytaarsAften">
         <!-- her tilføjes fyrværkeri svg'en direkte i html'en så den kan animeres -->
