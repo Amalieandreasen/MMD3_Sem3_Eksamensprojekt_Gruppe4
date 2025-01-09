@@ -15,6 +15,16 @@ const menukortTabs = [
   { title: "Rosé Vin", component: "Forret" }
 ];
 
+useHead({
+  title: 'Vinkort',
+  meta: [
+    {
+      name: 'description',
+      content: 'Vi har et stort udvalg af alle slags vin. Oplev vores almindelige eller udvidede vinkort.',
+    },
+  ],
+});
+
 </script>
 
 <template>
@@ -34,11 +44,15 @@ const menukortTabs = [
       <div>
       <h3>Vinkort</h3>
       <p>
-        Vi har forsigtigt udvalgt vores sæsonretter for at give dig den bedste oplevelse, med friske råvare der passer til årstiden. For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare. 
+        Vi har forsigtigt udvalgt vores sæsonretter for at give dig den bedste oplevelse, med friske råvare der passer til årstiden. For at fuldende oplevelsen, kan du udforske vores nøje udvalgte vinkort og drikkevare. 
       </p>
       <div class="btnDiv">
-        <TheButton title="Udvidet Vinkort"/>
+        <a href="https://drive.google.com/file/d/1JiH6jidTdNgp06-_dpR_yf0xDXLNRw1O/view?usp=sharing" target="_blank">
+        <TheButton title="Udvidet Vinkort" :isPdf="true"/>
+      </a>
+      <RouterLink to="/drikkevarer">
         <TheButton title="Drikkevarer"/>
+      </RouterLink>
       </div>
     </div>
       <img class="introImg" src="../assets/img/vinkortDesktop/introBillede.png" alt="Vinhylde">
@@ -107,6 +121,8 @@ const menukortTabs = [
   padding-bottom: 1rem;
   display: flex;
   gap: 2rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media all and (min-width: 768px){
@@ -129,7 +145,21 @@ const menukortTabs = [
     padding-right: 2rem;
   }
 
+  .introSec h3{
+    text-align: left;
+  }
+
+  .btnDiv{
+    flex-direction: row;
+  }
+
 
 }
+
+@media all and (min-width: 1800px){
+    .introSec{
+      margin-inline: 20rem;
+    }
+  }
 
 </style>

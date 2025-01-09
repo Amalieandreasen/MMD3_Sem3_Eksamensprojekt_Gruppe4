@@ -20,8 +20,13 @@ const splideOptions = ref({
   gap:50,
   focus:'left',
   rewind: true,
-  perPage: 1, 
-  autoHeigt: true, 
+  perPage: 2, 
+  autoHeight: true,
+  breakpoints: {
+    1800: {
+      perPage: 1, 
+    },
+  },
 });
 
 // actions
@@ -307,7 +312,25 @@ color: var(--background);
     display: none;
 }
 
+p, li{
+    max-width: none;
+}
+
+
 @media all and (min-width: 768px){
+
+    .helaftensArrangement h3, .bryllupsPakken h3, .konfirmationsPakken h3, .modePakken h3{
+        text-align: left;
+    }
+
+    .helaftensArrangement p, .bryllupsPakken p, .konfirmationsPakken p, .modePakken p{
+    margin-left: 0; 
+}
+
+.modePakken button{
+    margin-top: 1rem;
+}
+   
 
 .focusedWrapper{
     display: flex;
@@ -317,6 +340,10 @@ color: var(--background);
 
 .intro{
     margin-inline: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken{

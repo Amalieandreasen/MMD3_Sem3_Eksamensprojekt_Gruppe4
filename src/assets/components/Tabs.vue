@@ -62,7 +62,6 @@ const onScroll = (event) => {
 .tabHeaders {
   display: flex;
   overflow-x: auto;
-  margin-bottom: 1rem;
   background-color: var(--green);
   padding-top: 1rem;
   padding-bottom: 1rem;

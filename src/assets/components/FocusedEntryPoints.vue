@@ -56,6 +56,10 @@ defineProps({
     z-index: 1;
 }
 
+.entryPointContent p{
+  max-width: none;
+}
+
 .entryPoint{
     padding:2rem;
     margin: 2rem;

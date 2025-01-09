@@ -169,7 +169,7 @@ useHead({
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground2
     h3="Selskabspakker & Møder"
-    p="Vi tilbyder skræddersyet selskabspakker til dit næste møde eller arrangement. Mad, drikke og loakle samlet et sted."
+    p="Vi tilbyder skræddersyet selskabspakker til dit næste møde eller arrangement. Mad, drikke og lokale samlet et sted."
     buttonTitle="Læs mere"
     />
 </router-link>
@@ -328,6 +328,9 @@ useHead({
     .intro{
         margin-inline: 10rem;
         margin-block: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
     }
 
     .lokaler{
@@ -341,11 +344,13 @@ useHead({
     .privateDining{
         display: flex;
         margin-inline: 5rem;
+        align-items: center;
     }
 
     .privateDining img{
         padding: 2rem;
         height: 100%;
+        width: 60%;
     }
 
     .priser{

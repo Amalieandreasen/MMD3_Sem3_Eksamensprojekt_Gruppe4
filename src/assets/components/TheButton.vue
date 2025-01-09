@@ -9,6 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
+  <!-- Inspiration til hover effekten er taget fra: https://codepen.io/mhouse/pen/qbrxVB -->
       <button class="slide">
         <div v-if="props.isPdf">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#1C1C1C" width="20px">
@@ -28,9 +29,9 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Noto Serif Display", serif;
-  font-weight: 300;
+  font-weight: 400;
   display: flex;
   flex-direction: row-reverse;
   gap: 1rem;

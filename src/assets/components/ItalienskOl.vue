@@ -6,13 +6,13 @@ const menuItems = [
   { name: "American IPA 33 cl. flaske 6.7% alc.", description: "En betagende IPA med stor bitterhed. I denne øl har man udelukkende tilsat amerikanske humletyper der giver en forfriskende og distinkt frugtig øl med meget mundfylde.", price: "kr. 72,00" },
   { name: "Vienna Lager fadøl/draft 5,4% alc. 0,3l", description: "Vienna Lager er Canediguerras hyldest til en af Europas mest klassiske øltyper. I Danmark kender vi den ravfarvede Vienna Lager som en Classic - en lagerøl som smager dejligt af karamel. Denne øl er på 5,4% vol., og har en ren og mild smag, hvor man nænsomt har tilføjet humle, så de sarte noter af karamel kan træde frem.", price: "kr. 72,00" },
 ];
+
 </script>
 
 <template>
  <section class="heroSec">
     <div class="imgOverlay">
-        <!-- VIRKER IKKE -->
-        <img src="../assets/img/drikkevarerMobil/italienskeOl.png" alt="Italiensk Ol" srcset="../assets/img/drikkevarerDesktop/italienskeOlHero.png 768w">
+        <img src="../img/drikkevarerMobil/italienskeOl.png" alt="Italiensk Ol">
       <div class="txtOverlay">
         <h3>Italiensk Øl</h3>
       </div>
