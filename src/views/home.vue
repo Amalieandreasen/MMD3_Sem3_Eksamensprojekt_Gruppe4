@@ -37,9 +37,9 @@ const images =[
 ];
 
 // Her hentes billederne til focused entry points
-const focusedEntryPointsBackground1 = "@/assets/img/forsideDesktop/fepSelskabsmenu.png";
-const focusedEntryPointsBackground2 = "@/assets/img/forsideDesktop/fepSelskabslokaler.png";
-const focusedEntryPointsBackground3 = "@/assets/img/forsideDesktop/fepSelskabspakker.png";
+const focusedEntryPointsBackground1 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabsmenu.png";
+const focusedEntryPointsBackground2 = "src/assets/img/forsideDesktop/fepSelskabslokaler.png";
+const focusedEntryPointsBackground3 = "src/assets/img/forsideDesktop/fepSelskabspakker.png";
 
 // Her defineres de muligheder som vi har ved at bruge splide til vores billede slider. her sættes blandt andet at der kun skal vises et billede på små skærme, den skal selv skifte slide og skal starte forfra. link til splide.js: https://splidejs.com/
 const splideOptions = ref({
