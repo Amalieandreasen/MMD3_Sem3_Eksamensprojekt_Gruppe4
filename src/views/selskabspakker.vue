@@ -10,9 +10,9 @@ import { useHead } from '@vueuse/head';
 
 // states
 
-const focusedEntryPointsBackground2 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
-const focusedEntryPointsBackground3 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepSelskabspakker.png";
-const focusedEntryPointsBackground4 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepBar.png"
+const focusedEntryPointsBackground2 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
+const focusedEntryPointsBackground3 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabspakker.png";
+const focusedEntryPointsBackground4 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepBar.png"
 
 const splideOptions = ref({
   autoplay: true,
