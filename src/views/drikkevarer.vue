@@ -1,12 +1,13 @@
 <script setup>
 import { ref } from 'vue';
+// Her impoteres diverse komponenter som skal bruges på dette view
 import Tabs from '@/assets/components/Tabs.vue';
 import ItalienskOl from '@/assets/components/ItalienskOl.vue';
 import KoldeDrikkevarer from '@/assets/components/KoldeDrikkevarer.vue';
-
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
 
+// Her oprettes et array med de forskellige Tabs der skal bruges. 
 const menukortTabs = [
   { title: "Italienske Øl", component: ItalienskOl },
   { title: "Kolde drikkevarer", component: KoldeDrikkevarer },
@@ -110,21 +111,16 @@ const menukortTabs = [
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-  }
-
- 
+  } 
   .introImg {
     display: block; 
     width: 40%;  
     margin: 0;  
   }
-
   .introSec p {
     flex: 1;
     padding-right: 2rem;
   }
-
-
 }
 
 </style>

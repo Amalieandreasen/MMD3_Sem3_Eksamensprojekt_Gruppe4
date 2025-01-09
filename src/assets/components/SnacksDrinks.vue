@@ -96,13 +96,11 @@ const menuItems = [
 
 .menuTxt p {
   margin: 0;
-  font-size: 0.9rem;
   color: #bbb; 
 }
 
 .menuPrice p {
   margin: 0;
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
 }

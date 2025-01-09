@@ -106,7 +106,6 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
 
 .menuHeader .menuPrice {
   white-space: nowrap; 
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
   margin: 0;
@@ -129,14 +128,11 @@ smagen er intens og elegant med sprød eftersmag.`, price: "1/1 . Kr. 360,00 " }
 
 .menuTxt p {
   margin: 0;
-  font-size: 0.9rem;
   color: #bbb; 
 }
 
 .menuPrice p {
   margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
   text-align: right;
 }
 

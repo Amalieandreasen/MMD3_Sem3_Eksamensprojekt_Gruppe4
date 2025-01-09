@@ -1,4 +1,5 @@
 <script setup>
+// Her laves et array som indeholder de forskellige elementer som skal vises på siden
 const menuItems = [
   { name: "Sodavand", description: "Pepsi, Pepsi Max, Faxe Kondi, Mirinda appelsin", price: " 50cl. kr. 59,00 / 70 cl. kr. 72,00" },
   { name: "Tea Freddo - Galvanina	", description: "Fersken Iste fra Galvanina øko", price: "35,5 cl. kr. 59,00" },
@@ -16,17 +17,29 @@ const menuItems = [
       </div>
     </div>
   </section>
+  <!-- Her laves en dynamisk genereret liste med v-for -->
   <section class="menuList">
-    <div v-for="item in menuItems" :key="item.name" class="menuItem">
-      <div class="menuTxt">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
-      <div class="menuPrice">
-        <p>{{ item.price }}</p>
-      </div>
+  <!-- Iterer over hver 'item' i 'menuItems'-arrayet -->
+  <div 
+    v-for="item in menuItems" 
+    :key="item.name" 
+    class="menuItem"
+  >
+    <!-- Viser teksten til hvert menupunkt -->
+    <div class="menuTxt">
+      <!-- Viser navnet på elementet -->
+      <h3>{{ item.name }}</h3>
+      <!-- Viser beskrivelsen af elementet -->
+      <p>{{ item.description }}</p>
     </div>
-  </section>
+
+    <!-- Viser prisen på elementet -->
+    <div class="menuPrice">
+      <p>{{ item.price }}</p>
+    </div>
+  </div>
+</section>
+
 </template>
 
 <style scoped>

@@ -3,8 +3,8 @@
 
 <template>
   <div>
-    <h3>Forret</h3>
-    <p>TEST TEST TEST TEST</p>
+    <h3>SKAL FJERNES</h3>
+    <p></p>
   </div>
 </template>
 

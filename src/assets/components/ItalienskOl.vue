@@ -1,4 +1,5 @@
 <script setup>
+// Her laves et array som indeholder de forskellige elementer som skal vises på siden
 const menuItems = [
   { name: "Bohemian Pils fadøl/draft 5% alc. 0,3l", description: "En traditionel pilsner på 5% vol., der har en ot gylden farve. Smagsmæssigt har Bohemian Pilsner et nt udtryk af korn og ristet brød. En øl der byder på en behagelig medium bitterhed med et skarpt aromatisk udtryk fra den tilsatte Saaz humle.", price: "kr. 89,00" },
   { name: "Vienna Lager fadøl/draft 5,4% alc. 0,3l", description: "Vienna Lager er Canediguerras hyldest til en af Europas mest klassiske øltyper. I Danmark kender vi den ravfarvede Vienna Lager som en Classic - en lagerøl som smager dejligt af karamel. Denne øl er på 5,4% vol., og har en ren og mild smag, hvor man nænsomt har tilføjet humle, så de sarte noter af karamel kan træde frem.", price: "kr. 89,00" },
@@ -17,14 +18,18 @@ const menuItems = [
       </div>
     </div>
   </section>
+    <!-- Her laves en dynamisk genereret liste med v-for -->
   <section class="menuList">
     <div class="wrapper">
     <div>
     <div v-for="item in menuItems" :key="item.name" class="menuItem">
+      <!-- Viser navnet på elementet -->
   <div class="menuHeader">
     <h3>{{ item.name }}</h3>
+    <!-- Viser prisen på elementet -->
     <p class="menuPrice">{{ item.price }}</p>
   </div>
+  <!-- Viser description på elementet -->
   <p class="menuTxt">{{ item.description }}</p>
 </div>
 

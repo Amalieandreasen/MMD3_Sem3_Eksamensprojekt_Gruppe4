@@ -1,4 +1,5 @@
 <script setup>
+// Her laves et array som indeholder de forskellige elementer som skal vises på siden
 const menuItems = [
   { name: "Spumante Dry DOC", description: "Spumante Dry laves på Chardonnay og Glera druer i Veneto regionen i det nordøstlige Italien. Duften er klassisk for mousserende vine fra dette område med fersken, pære, æble og citrus, smagen er tør, men tilført friskhed i form at modne frugter og akacie.", price: "l. Kr. 85,00 1/1 . Kr. 350,00 " },
 
@@ -94,7 +95,6 @@ const menuItems = [
 
 .menuHeader .menuPrice {
   white-space: nowrap; 
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
   margin: 0;
@@ -113,18 +113,15 @@ const menuItems = [
 
 .menuTxt h3 {
   margin: 0;
-  font-size: 1.2rem;
 }
 
 .menuTxt p {
   margin: 0;
-  font-size: 0.9rem;
   color: #bbb; 
 }
 
 .menuPrice p {
   margin: 0;
-  font-size: 1rem;
   font-weight: bold;
   text-align: right;
 }
