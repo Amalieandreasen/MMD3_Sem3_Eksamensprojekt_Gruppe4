@@ -30,7 +30,9 @@ import TheButton from './TheButton.vue';
             <h2>Kontakt os</h2>
             <a href="tel:98113755">Telefon: +45 98 11 37 55</a>
             <a href="mailto:sangiovanni@sangiovanni.dk">Mail: sangiovanni@sangiovanni.dk</a>
+            <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" target="_blank">
             <TheButton title="Book bord"/>
+        </a>
         </section>
     </div>
     </footer>

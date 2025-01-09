@@ -70,10 +70,6 @@ const onScroll = (event) => {
 }
 
 
-/* .tabHeaders::-webkit-scrollbar {
-  display: none; 
-} */
-
 .tabHeaders button {
   flex: 1;
   padding: 0.5rem 1rem;
@@ -151,6 +147,10 @@ const onScroll = (event) => {
   transition: background-color 0.3s ease, border-left-color 0.3s ease;
 }
 
+.tabHeaders button:hover{
+  
+}
+
 .tabHeaders button.active {
   font-weight: bold;
   border-left-color: var(--gold); 
@@ -159,7 +159,6 @@ const onScroll = (event) => {
 
 .tabContent {
   width: 80%; 
-  /* padding: 5rem; */
   overflow-y: auto; 
   box-sizing: border-box; 
 }

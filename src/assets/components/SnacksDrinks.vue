@@ -30,9 +30,6 @@ const menuItems = [
         <p>{{ item.price }}</p>
       </div>
     </div>
-    <div class="imgSnacknDrinks">
-      <img src="../img/drinks&snakcksMenuMobil.png" alt="">
-    </div>
   </section>
 </template>
 

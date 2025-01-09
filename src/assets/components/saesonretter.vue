@@ -226,10 +226,6 @@ const menuItemsFK = [
   .deskImg{
     display: block;
   }
-
-  .deskImg img{
-    border-radius: 12px;
-  }
 }
 
 </style>
