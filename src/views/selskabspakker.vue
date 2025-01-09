@@ -10,9 +10,9 @@ import { useHead } from '@vueuse/head';
 
 // states
 
-const focusedEntryPointsBackground2 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
-const focusedEntryPointsBackground3 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabspakker.png";
-const focusedEntryPointsBackground4 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepBar.png"
+const focusedEntryPointsBackground2 = new URL("@/assets/img/forsideDesktop/fepSelskabslokaler.png", import.meta.url).href;
+const focusedEntryPointsBackground3 = new URL("@/assets/img/forsideDesktop/fepSelskabsmenu.png", import.meta.url).href;
+const focusedEntryPointsBackground4 = new URL( "@/assets/img/forsideDesktop/fepBar.png", import.meta.url).href;
 
 const splideOptions = ref({
   autoplay: true,

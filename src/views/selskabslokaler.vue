@@ -17,9 +17,9 @@ import slide8 from '../assets/img/selskabslokalerDesktop/slide8.png';
 
 // states
 
-const focusedEntryPointsBackground2 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabspakker.png";
-const focusedEntryPointsBackground3 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabsmenu.png";
-const focusedEntryPointsBackground4 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepBar.png"
+const focusedEntryPointsBackground2 = new URL("@/assets/img/forsideDesktop/fepSelskabspakker.png", import.meta.url).href;
+const focusedEntryPointsBackground3 = new URL("@/assets/img/forsideDesktop/fepSelskabslokaler.png", import.meta.url).href;
+const focusedEntryPointsBackground4 = new URL( "@/assets/img/forsideDesktop/fepBar.png", import.meta.url).href;
 
 
 const images =[

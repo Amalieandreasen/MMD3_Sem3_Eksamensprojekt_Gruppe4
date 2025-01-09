@@ -37,9 +37,10 @@ const images =[
 ];
 
 // Her hentes billederne til focused entry points
-const focusedEntryPointsBackground1 = new URL('@/assets/img/forsideDesktop/fepSelskabsmenu.png', import.meta.url).href;
-const focusedEntryPointsBackground2 = "src/assets/img/forsideDesktop/fepSelskabslokaler.png";
-const focusedEntryPointsBackground3 = "src/assets/img/forsideDesktop/fepSelskabspakker.png";
+// Vi har haft mange problemer med stierne ved disse baggrundsbilleder når vi buildede og de skulle over på et andet domæne. Vi har derfor søgt mange steder på nettet og fundet denne løsning med new URL som virker, dog er vi usikre på hvorfor helt præcist. 
+const focusedEntryPointsBackground1 = new URL("@/assets/img/forsideDesktop/fepSelskabsmenu.png", import.meta.url).href;
+const focusedEntryPointsBackground2 = new URL("@/assets/img/forsideDesktop/fepSelskabslokaler.png", import.meta.url).href;
+const focusedEntryPointsBackground3 = new URL("@/assets/img/forsideDesktop/fepSelskabspakker.png", import.meta.url).href;
 
 // Her defineres de muligheder som vi har ved at bruge splide til vores billede slider. her sættes blandt andet at der kun skal vises et billede på små skærme, den skal selv skifte slide og skal starte forfra. link til splide.js: https://splidejs.com/
 const splideOptions = ref({
