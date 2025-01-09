@@ -37,7 +37,7 @@ const images =[
 ];
 
 // Her hentes billederne til focused entry points
-const focusedEntryPointsBackground1 = "/sangiovanni-eksamensprojekt/src/assets/img/forsideDesktop/fepSelskabsmenu.png";
+const focusedEntryPointsBackground1 = new URL('@/assets/img/forsideDesktop/fepSelskabsmenu.png', import.meta.url).href;
 const focusedEntryPointsBackground2 = "src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "src/assets/img/forsideDesktop/fepSelskabspakker.png";
 
