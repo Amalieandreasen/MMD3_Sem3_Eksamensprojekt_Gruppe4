@@ -4,20 +4,21 @@ import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
 import Saesonretter from '@/assets/components/saesonretter.vue';
-
+import Dummy from '@/assets/components/Dummy.vue';
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import { useHead } from '@vueuse/head';
 
 const menukortTabs = [
   { title: "Sæsonretter", component: Saesonretter },
   { title: "Snacks & Drinks", component: SnacksDrinks },
-  { title: "Forretter", component: "Forretter" },
-  { title: "Pasta", component: "Forret" },
-  { title: "Kød", component: "Forret" },
-  { title: "Tilbehør", component: "Forret" },
-  { title: "Pizze", component: "Forret" },
-  { title: "Dessert", component: "Forret" },
-  { title: "Børnemenu", component: "Forret" },
+  { title: "Forretter", component: Dummy },
+  { title: "Pasta", component: Dummy },
+  { title: "Kød", component: Dummy },
+  { title: "Tilbehør", component: Dummy },
+  { title: "Pizze", component: Dummy },
+  { title: "Dessert", component: Dummy },
+  { title: "Børnemenu", component: Dummy },
 ];
 
 useHead({

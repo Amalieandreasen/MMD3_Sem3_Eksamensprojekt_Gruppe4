@@ -4,15 +4,16 @@ import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import Mousserende from '@/assets/components/Mousserende.vue';
 import Hvidvin from '@/assets/components/Hvidvin.vue';
-
+import Dummy from '@/assets/components/Dummy.vue';
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import { useHead } from '@vueuse/head';
 
 const menukortTabs = [
   { title: "Mousserende", component: Mousserende },
   { title: "Hvidvin", component: Hvidvin },
-  { title: "Rødvin", component: "Rødvin" },
-  { title: "Rosé Vin", component: "Forret" }
+  { title: "Rødvin", component: Dummy },
+  { title: "Rosé Vin", component: Dummy }
 ];
 
 useHead({

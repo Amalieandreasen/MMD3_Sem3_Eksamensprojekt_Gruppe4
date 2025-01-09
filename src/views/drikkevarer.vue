@@ -6,13 +6,15 @@ import ItalienskOl from '@/assets/components/ItalienskOl.vue';
 import KoldeDrikkevarer from '@/assets/components/KoldeDrikkevarer.vue';
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import Dummy from '@/assets/components/Dummy.vue';
+import { useHead } from '@vueuse/head';
 
 // Her oprettes et array med de forskellige Tabs der skal bruges. 
 const menukortTabs = [
   { title: "Italienske Øl", component: ItalienskOl },
   { title: "Kolde drikkevarer", component: KoldeDrikkevarer },
-  { title: "Kaffe", component: "Forretter" },
-  { title: "Likør", component: "Forret" }
+  { title: "Kaffe", component: Dummy },
+  { title: "Likør", component: Dummy }
 ];
 
 useHead({
