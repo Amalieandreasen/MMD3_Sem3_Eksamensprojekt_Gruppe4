@@ -174,7 +174,7 @@ useHead({
     <FocusedEntryPoints
     :image=focusedEntryPointsBackground3
     h3="Selskabspakker & møder"
-    p="Vi tilbyder skrædersyet selskabspakker til dit næste møde eller arrangement. Mad, drikke og lokale samlet et sted."
+    p="Vi tilbyder skræddersyede selskabspakker til dit næste møde eller arrangement. Mad, drikke og lokale samlet et sted."
     buttonTitle="Læs mere"
     />
 </router-link>
@@ -272,7 +272,9 @@ useHead({
 </section>
 <article class="facebookSection">
 <h2>Vi er på Facebook</h2>
+<div class="fbText">
 <p>Vi opdaterer ofte vores sociale medier med nyheder, inspiration til dit næste selskab og meget mere. </p>
+</div>
 <div class="posts">
     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsangiovanniaalborg%2Fposts%2Fpfbid0N8cAkaZY3uxe8i1HdMnEVEudYCCBueycSKhwi5rPQ72syhBBQ5XrcB5w8QYrjvnJl&show_text=true&width=500" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsangiovanniaalborg%2Fposts%2Fpfbid02kPoDcjXta6queYkbdzEGFDbpB2dBuik6MoKJYAiBZvVtBuAPznNVBnPuDSnFGgNNl&show_text=true&width=500" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
@@ -483,6 +485,12 @@ iframe{
 .menuButtons{
 
     flex-direction: row;
+}
+
+.fbText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 }
 

@@ -21,7 +21,7 @@ const menuItemsFK = [
 <template>
  <section class="heroSec">
     <div class="imgOverlay">
-      <img src="../img/menuDesktop/sasonretter1.png" alt="Billede af drinks & Snacks">
+      <img src="../img/menuMobil/saaesonretterHero.png" alt="Billede af sæsonret">
       <div class="txtOverlay">
         <h3>Sæsonretter</h3>
       </div>
@@ -225,10 +225,6 @@ const menuItemsFK = [
 @media all and (min-width: 1024px){
   .deskImg{
     display: block;
-  }
-
-  .deskImg img{
-    border-radius: 12px;
   }
 }
 

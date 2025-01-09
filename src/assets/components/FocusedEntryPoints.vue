@@ -44,7 +44,7 @@ defineProps({
 <style scoped>
 .entryPointContent{
     background-image:url(../img/forsideDesktop/fepSelskabspakker.png);
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.466);
     background-size: cover;
     height: 400px;
     display: flex;
@@ -54,6 +54,10 @@ defineProps({
     padding: 1rem;
     text-align: center;
     z-index: 1;
+}
+
+.entryPointContent p{
+  max-width: none;
 }
 
 .entryPoint{

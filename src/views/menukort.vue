@@ -20,6 +20,16 @@ const menukortTabs = [
   { title: "Børnemenu", component: "Forret" },
 ];
 
+useHead({
+  title: 'Menukort',
+  meta: [
+    {
+      name: 'description',
+      content: 'Se vores store udvalg af italienske delikatesser',
+    },
+  ],
+});
+
 </script>
 
 <template>
@@ -40,11 +50,15 @@ const menukortTabs = [
       <h3>Noget for enhver smag</h3>
       <p>
         Oplev vores lækre italienske menukort med noget for enhver smag. Vi har sammensat et væld af lækre italienske retter både faste velkendte klassikere og sæsonretter som bliver udskiftet i forhold til smag og sæson. <br> <br>
-        For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevare.
+        For at fuldende opleveslsen, kan du udforske vores nøje udvalgte vinkort og drikkevarer.
       </p>
       <div class="btnDiv">
+        <RouterLink to="/vinkort">
         <TheButton title="Vinkort"/>
-        <TheButton title="Drikkevare"/>
+      </RouterLink>
+      <RouterLink to="/drikkevarer">
+        <TheButton title="Drikkevarer"/>
+      </RouterLink>
       </div>
     </div>
       <img class="introImg" src="../assets/img/menuHeroMobil.png" alt="Menu Image">
@@ -113,6 +127,8 @@ const menukortTabs = [
   padding-bottom: 1rem;
   display: flex;
   gap: 2rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media all and (min-width: 768px){
@@ -135,7 +151,20 @@ const menukortTabs = [
     padding-right: 2rem;
   }
 
+  .introSec h3{
+    text-align: left;
+  }
+
+  .btnDiv{
+    flex-direction: row;
+  }
 
 }
+
+@media all and (min-width: 1800px){
+    .introSec{
+      margin-inline: 20rem;
+    }
+  }
 
 </style>

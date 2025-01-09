@@ -15,6 +15,16 @@ const menukortTabs = [
   { title: "Likør", component: "Forret" }
 ];
 
+useHead({
+  title: 'Drikkevarer',
+  meta: [
+    {
+      name: 'description',
+      content: 'Se vores store udvalg af lækre drikkevarer her.',
+    },
+  ],
+});
+
 </script>
 
 <template>
@@ -24,7 +34,7 @@ const menukortTabs = [
       <div class="heroOverlay">
         <img src="../assets/img/drikkevarerMobil/hero.png" alt="Vin" srcset="../assets/img/drikkevarerDesktop/hero.png 768w">
         <div class="heroText">
-          <h1>Drikkevare</h1>
+          <h1>Drikkevarer</h1>
         </div>
       </div>
     </section>
@@ -32,7 +42,7 @@ const menukortTabs = [
     <section class="introSec">
       <div class="introWrapper">
       <div>
-      <h3>Drikkevare</h3>
+      <h3>Drikkevarer</h3>
       <p>
         Vi tilbyder et udsøgt udvalg af drikkevarer, der passer til enhver lejlighed. Nyd smagen af autentiske italienske øl, kølige og læskende drikke, klassisk kaffe eller en aromatisk likør som den perfekte afslutning på dit måltid. Uanset hvad du vælger, er vores drikkevarer skabt til at komplementere din oplevelse hos os.
       </p>
@@ -98,13 +108,6 @@ const menukortTabs = [
   display: none;
 }
 
-.btnDiv{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  gap: 2rem;
-}
-
 @media all and (min-width: 768px){
 
   .introWrapper{
@@ -121,6 +124,16 @@ const menukortTabs = [
     flex: 1;
     padding-right: 2rem;
   }
+
+  .introSec h3{
+    text-align: left;
+  }
 }
+
+@media all and (min-width: 1800px){
+    .introSec{
+      margin-inline: 20rem;
+    }
+  }
 
 </style>

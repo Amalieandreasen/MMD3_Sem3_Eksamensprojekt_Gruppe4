@@ -261,6 +261,7 @@ useHead({
 .menuTxt h3 {
   margin: 0;
   font-size: 1.2rem;
+  text-align: left;
 }
 
 .menuTxt p {
@@ -322,6 +323,10 @@ useHead({
 @media all and (min-width: 768px){
   .intro{
     margin-inline: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .forretter, .hovedretter, .desserter, .tilkob{
@@ -338,7 +343,7 @@ useHead({
 }
 
 .foodImage{
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -348,6 +353,14 @@ useHead({
 
 .anretning{
   padding-inline: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menuTxt h3 {
+  text-align: left;
 }
 }
 

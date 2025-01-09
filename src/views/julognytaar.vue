@@ -693,8 +693,8 @@ useHead({
   width: 200px; 
   animation: slideIn 3s ease-out forwards;
   opacity: 0;
-  top: 70%;
-  left: -100%;
+  top: 0%;
+  left: -90%;
   overflow: hidden;
 }
 
@@ -884,16 +884,21 @@ path.explode.inView {
   width: 300px; 
 }
 
+.julemenu h2, .nytaarsAften h2, .nytaarsMenu h2{
+text-align: left;
+margin-left: 2rem;
+}
+
+}
+
 @media all and (min-width: 1800px){
    
-.julemand{
-    width: 500px;
-}
-
-.julemenu, .nytaarsAften, .nytaarsMenu{
-    margin-inline: 20rem;
-}
-}
-}
-
+   .julemand{
+       width: 500px;
+   }
+   
+   .julemenu, .nytaarsAften, .nytaarsMenu{
+       margin-inline: 20rem;
+   }
+   }
 </style>

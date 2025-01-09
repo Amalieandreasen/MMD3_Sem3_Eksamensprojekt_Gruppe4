@@ -1,5 +1,4 @@
-<script setup>
-import Selskabsmenu from '@/views/selskabsmenu.vue';
+<script setup>    
 import { ref, onMounted } from 'vue';
 
 // States
@@ -197,6 +196,14 @@ nav ul ul li a:hover{
         background-color: var(--green);
         margin-top: 10px;
         transition: right 0.3s ease-in-out;
+        padding: 0;
+    }
+
+    nav ul ul{
+        border-bottom: 1px solid var(--gold);
+        border-top: 1px solid var(--gold);
+        border-right: none;
+        border-left: none;
     }
 
     nav .logo{
@@ -208,6 +215,8 @@ nav ul ul li a:hover{
     nav ul li, nav ul ul li{
         display: block;
         width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     nav ul ul{
