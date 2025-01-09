@@ -148,7 +148,9 @@ const onScroll = (event) => {
 }
 
 .tabHeaders button:hover{
-  
+  font-weight: bold;
+  border-left-color: var(--gold); 
+  background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .tabHeaders button.active {
