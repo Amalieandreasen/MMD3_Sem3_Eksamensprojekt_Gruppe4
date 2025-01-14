@@ -10,7 +10,6 @@ import {ref} from 'vue';
 import { useHead } from '@vueuse/head';
 
 // states
-
 const focusedEntryPointsBackground2 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepSelskabslokaler.png";
 const focusedEntryPointsBackground3 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepSelskabspakker.png";
 const focusedEntryPointsBackground4 = "/test-sem3Eksamen/src/assets/img/forsideDesktop/fepBar.png"
@@ -26,7 +25,6 @@ const splideOptions = ref({
 });
 
 // actions
-
 useHead({
   title: 'Selskabspakker',
   meta: [
@@ -37,7 +35,14 @@ useHead({
   ],
 });
 
+// Billeder til Section Component
 import helaftenImgMobil from '@/assets/img/selskabspakkerMobil/helaftensarrangement.png'
+import helaftenImgDesktop from '@/assets/img/selskabspakkerDesktop/helaftensarrangement.png'
+import bryllupImgMobil from '@/assets/img/selskabspakkerMobil/bryllupspakken.png'
+import bryllupImgDesktop from '@/assets/img/selskabspakkerDesktop/bryllupspakken.png'
+import konfirmationImgMobil from '@/assets/img/selskabspakkerMobil/konfirmationspakken.png'
+import konfirmationImgDesktop from '@/assets/img/selskabspakkerDesktop/konfirmationspakken.png'
+
 
 const sections = [
     {
@@ -46,9 +51,9 @@ const sections = [
     "Ved et helaftens arrangement på SanGiovanni, er alt med i den fastsatte kuvertpris lige fra velkomst til bar og natmad.",
     "Et helaftensarrangement kan tilpasses til lige dine behov alt efter menuen, hvor mange der skal med og hvilken anledning selskabet skal holdes til. Selskaber kan holdes i vores flotte lokaler i La Cantina.",
     ],
-    imgSrc: "../assets/img/selskabspakkerMobil/helaftensarrangement.png",
+    imgSrc: helaftenImgMobil,
     imgAlt: "La Cantina",
-    imgSrcSet: "../assets/img/selskabspakkerDesktop/helaftensarrangement.png 768w",
+    imgSrcSet: `${helaftenImgDesktop} 768w`,
     button1Title: "Kontakt os for booking",
     button1IsPdf: false,
     button2Title: "Hent brochure om selskaber",
@@ -64,8 +69,8 @@ const sections = [
       "Der er mange ting der skal tages hånd om, og vi hjælper jer gerne hele vejen igennem med sparring og vejledning så I får lige nøjagtig den fest I drømmer om.",
     ],
     imgSrc: "../assets/img/selskabspakkerMobil/bryllupspakken.png",
-    imgAlt: "Opdækning",
-    imgSrcSet: "../assets/img/selskabspakkerDesktop/bryllupspakken.png 768w",
+    imgAlt: bryllupImgMobil,
+    imgSrcSet: `${bryllupImgDesktop} 768w`,
     button1Title: "Kontakt os for booking",
     button1IsPdf: false,
     button2Title: "Læs alt om bryllupspakken",
@@ -81,8 +86,8 @@ const sections = [
       "Kontakt os i dag, så hjælper vi jer fra start til slut.",
     ],
     imgSrc: "../assets/img/selskabspakkerMobil/konfirmationspakken.png",
-    imgAlt: "La Cantina",
-    imgSrcSet: "../assets/img/selskabspakkerDesktop/konfirmationspakken.png 768w",
+    imgAlt: konfirmationImgMobil,
+    imgSrcSet: `${konfirmationImgDesktop} 768w`,
     button1Title: "Kontakt os for booking",
     button1IsPdf: false,
     button2Title: "Læs alt om konfirmationspakken",
@@ -113,7 +118,7 @@ const sections = [
         <p>Her på siden kan du se et udvalg af de pakker vi tilbyder og nederst på siden har du mulighed for at se hvordan du kan tilpasse menuen til dit selskab</p>
         </div>
     </section>
-    <!-- <SectionAdjustable
+    <SectionAdjustable
       v-for="(section, index) in sections"
       :key="index"
       :title="section.title"
@@ -127,47 +132,7 @@ const sections = [
       :button2Href="section.button2Href"
       :button2IsPdf="section.button2IsPdf"
       :isReverse="section.isReverse"
-    /> -->
-   <section class="helaftensArrangement">
-    <div class="displayWrapper">
-    <h3>Helaftensarrangement</h3>
-    <p>Ved et helaftens arrangement på SanGiovanni, er alt med i den fastsatte kuvertpris lige fra velkomst til bar og natmad.</p>
-    <p>Et helaftensarrangement kan tilpasses til lige dine behov alt efter menuen, hvor mange der skal med og hvilken anledning selskabet skal holdes til. Selskabes kan holdes i vores flotter lokaler i La Cantina</p>
-    <div class="buttonWrapper">
-        <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
-        <TheButton title="Hent brochure om selskaber" :isPdf="true"/>
-    </a>
-    </div>
-</div>
-    <img src="../assets/img/selskabspakkerMobil/helaftensarrangement.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/helaftensarrangement.png 768w">
-   </section>
-   <section class="bryllupsPakken">
-    <div class="displayWrapper">
-    <h3>Bryllupspakken</h3>
-    <p> Brylluppet er livets store fest og vi har mange års erfaring med at gøre denne store dag helt jeres. Der er mange ting der skal tages hånd om, og vi hjælper jer gerne hele vejen igennem med sparring og vejledning så I får lige nøjagtig den fest i drømmer om.</p>
-    <div class="buttonWrapper">
-        <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
-        <TheButton title="Læs alt om bryllupspakken" :isPdf="true"/>
-    </a>
-    </div>
-</div>
-    <img src="../assets/img/selskabspakkerMobil/bryllupspakken.png" alt="Opdækning" srcset="../assets/img/selskabspakkerDesktop/bryllupspakken.png 768w">
-   </section>
-   <section class="konfirmationsPakken">
-    <div class="displayWrapper">
-    <h3>Konfirmationspaken</h3>
-    <p> Konfirmation er en stor dag for det unge menneske, og derfor hjælper vi gerne med at holde en smuk og vellykket fest lige efter jeres behov. Kontakt os i dag, så hjælper vi jer fra start til slut.</p>
-    <div class="buttonWrapper">
-        <TheButton title="Kontakt os for booking" :isPdf="false"/>
-        <a href="https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing" target="_blank">
-        <TheButton title="Læs alt om konfirmationspakken" :isPdf="true"/>
-    </a>
-    </div>
-</div>
-    <img src="../assets/img/selskabspakkerMobil/konfirmationspakken.png" alt="La Cantina" srcset="../assets/img/selskabspakkerDesktop/konfirmationspakken.png 768w">
-   </section>
+    />
    <section class="modePakken">
     <div class="displayWrapper">
     <h3>Mødepakken</h3>
@@ -331,18 +296,18 @@ text-align: center;
 margin-block: 2rem;
 }
 
-.intro p, .helaftensArrangement p, .bryllupsPakken p, .konfirmationsPakken p, .modePakken p{
+.intro p, .modePakken p{
     margin-inline: 2rem;
     margin-bottom: 1rem;  
 }
 
-.helaftensArrangement h3, .bryllupsPakken h3, .konfirmationsPakken h3, .modePakken h3{
+.modePakken h3{
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
-.helaftensArrangement img, .bryllupsPakken img, .konfirmationsPakken img, .modePakken img{
+.modePakken img{
     width: 100%;
 }
 
@@ -396,14 +361,14 @@ color: var(--background);
     align-items: center;
 }
 
-.helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken{
+.modePakken{
     display: flex;
     margin-inline: 5rem;
     margin-block: 3rem;
     gap: 2rem;
 }
 
-.helaftensArrangement img, .bryllupsPakken img, .konfirmationsPakken img, .modePakken img{
+.modePakken img{
     width: 50%;
 }
 
@@ -411,7 +376,7 @@ color: var(--background);
     flex-direction: row;
 }
 
-.bryllupsPakken, .modePakken{
+.modePakken{
     flex-direction: row-reverse;
 }
 
@@ -432,7 +397,7 @@ color: var(--background);
 }
 
 @media all and (min-width: 1800px){
-    .helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken, .intro{
+    .modePakken, .intro{
         margin-inline: 20rem;
     }
 
