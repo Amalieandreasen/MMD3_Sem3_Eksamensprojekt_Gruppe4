@@ -666,9 +666,9 @@ useHead({
         </p>
         <div class="nytaarsmenuButtons">
             <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
-        <TheButton title="Se menuen" />
+        <TheButton title="Se menuen" :isPdf="true"/>
     </a>
-        <TheButton title="Bestil Menu" />
+        <TheButton title="Bestil Menu" :isPdf="true"/>
     </div>
 </div>
         <img src="../assets/img/julognytaarMobil/nytaarsmenu.png" alt="Nytårsmenu" srcset="../assets/img/julognytarDesktop/nytaarsmenu.png 768w">

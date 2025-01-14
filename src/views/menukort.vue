@@ -1,12 +1,15 @@
 <script setup>
 import TheButton from '@/assets/components/TheButton.vue';
+import TheHero from '@/assets/components/TheHero.vue';
 import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
 import Saesonretter from '@/assets/components/saesonretter.vue';
+import hero from '@/assets/img/menuDesktop/hero.png'
 
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+
 
 const menukortTabs = [
   { title: "Sæsonretter", component: Saesonretter },
@@ -25,15 +28,20 @@ const menukortTabs = [
 <template>
     <main>
       <Navigation/>
-        <section class="heroSec">
+        <!-- <section class="heroSec">
       <div class="heroOverlay">
         <img src="../assets/img/menuDesktop/hero.png" alt="">
         <div class="heroText">
           <h1>Menukort</h1>
         </div>
       </div>
-    </section>
-
+    </section> -->
+    <TheHero
+    :imgSrc="hero" 
+    title="Menukort"
+    imgAlt="Billede af ret"
+    />
+    
     <section class="introSec">
       <div class="introWrapper">
       <div>
@@ -54,10 +62,10 @@ const menukortTabs = [
 <Tabs :tabs="menukortTabs" title="Udvalg" />
 <TheFooter/>
 </main>
-</template>
+</template> 
 
 <style scoped>
-.heroSec {
+/* .heroSec {
   position: relative;
   width: 100%;
   height: 50vh; 
@@ -95,7 +103,7 @@ const menukortTabs = [
   color: white;
   z-index: 2;
   text-align: center;
-}
+} */
 
 .introSec{
     margin: 8%;

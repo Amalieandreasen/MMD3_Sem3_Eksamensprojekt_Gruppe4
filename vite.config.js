@@ -14,5 +14,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  }, base: "/test-sem3Eksamen/"
+  }, base: "/"
 })

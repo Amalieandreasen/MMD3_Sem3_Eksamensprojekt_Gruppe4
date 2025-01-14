@@ -2,6 +2,7 @@
 import Navigation from '@/assets/components/Navigation.vue';
 import TheButton from '@/assets/components/TheButton.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import SectionAdjustable from '@/assets/components/SectionAdjustable.vue';
 import FocusedEntryPoints from '@/assets/components/FocusedEntryPoints.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -36,6 +37,62 @@ useHead({
   ],
 });
 
+import helaftenImgMobil from '@/assets/img/selskabspakkerMobil/helaftensarrangement.png'
+
+const sections = [
+    {
+    title: "Helaftensarrangementer",
+    paragraphs: [
+    "Ved et helaftens arrangement på SanGiovanni, er alt med i den fastsatte kuvertpris lige fra velkomst til bar og natmad.",
+    "Et helaftensarrangement kan tilpasses til lige dine behov alt efter menuen, hvor mange der skal med og hvilken anledning selskabet skal holdes til. Selskaber kan holdes i vores flotte lokaler i La Cantina.",
+    ],
+    imgSrc: "../assets/img/selskabspakkerMobil/helaftensarrangement.png",
+    imgAlt: "La Cantina",
+    imgSrcSet: "../assets/img/selskabspakkerDesktop/helaftensarrangement.png 768w",
+    button1Title: "Kontakt os for booking",
+    button1IsPdf: false,
+    button2Title: "Hent brochure om selskaber",
+    button2Href:
+      "https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing",
+    button2IsPdf: true,
+    isReverse: false,
+},
+{
+    title: "Bryllupspakken",
+    paragraphs: [
+      "Brylluppet er livets store fest, og vi har mange års erfaring med at gøre denne store dag helt jeres.",
+      "Der er mange ting der skal tages hånd om, og vi hjælper jer gerne hele vejen igennem med sparring og vejledning så I får lige nøjagtig den fest I drømmer om.",
+    ],
+    imgSrc: "../assets/img/selskabspakkerMobil/bryllupspakken.png",
+    imgAlt: "Opdækning",
+    imgSrcSet: "../assets/img/selskabspakkerDesktop/bryllupspakken.png 768w",
+    button1Title: "Kontakt os for booking",
+    button1IsPdf: false,
+    button2Title: "Læs alt om bryllupspakken",
+    button2Href:
+      "https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing",
+    button2IsPdf: true,
+    isReverse: true,
+  },
+  {
+    title: "Konfirmationspakken",
+    paragraphs: [
+      "Konfirmation er en stor dag for det unge menneske, og derfor hjælper vi gerne med at holde en smuk og vellykket fest lige efter jeres behov.",
+      "Kontakt os i dag, så hjælper vi jer fra start til slut.",
+    ],
+    imgSrc: "../assets/img/selskabspakkerMobil/konfirmationspakken.png",
+    imgAlt: "La Cantina",
+    imgSrcSet: "../assets/img/selskabspakkerDesktop/konfirmationspakken.png 768w",
+    button1Title: "Kontakt os for booking",
+    button1IsPdf: false,
+    button2Title: "Læs alt om konfirmationspakken",
+    button2Href:
+      "https://drive.google.com/file/d/19RQlnFxq5hAsNvmKqb05Wx6E_LPTKtUj/view?usp=sharing",
+    button2IsPdf: true,
+    isReverse: false,
+  },
+];
+
 </script>
 
 <template>
@@ -51,9 +108,26 @@ useHead({
     </section>
     <section class="intro">
         <h2>Selskaber til dit behov</h2>
+        <div class="introPWrap">
         <p>På SanGiovanni byder vi velkommen til alle former for selskaber og arrangementer. Alt fra bryllup til konfirmation, mærkedage og firmafester og der går sjældent en weekend uden et arrangement.</p>
         <p>Her på siden kan du se et udvalg af de pakker vi tilbyder og nederst på siden har du mulighed for at se hvordan du kan tilpasse menuen til dit selskab</p>
+        </div>
     </section>
+    <!-- <SectionAdjustable
+      v-for="(section, index) in sections"
+      :key="index"
+      :title="section.title"
+      :paragraphs="section.paragraphs"
+      :imgSrc="section.imgSrc"
+      :imgAlt="section.imgAlt"
+      :imgSrcSet="section.imgSrcSet"
+      :button1Title="section.button1Title"
+      :button1IsPdf="section.button1IsPdf"
+      :button2Title="section.button2Title"
+      :button2Href="section.button2Href"
+      :button2IsPdf="section.button2IsPdf"
+      :isReverse="section.isReverse"
+    /> -->
    <section class="helaftensArrangement">
     <div class="displayWrapper">
     <h3>Helaftensarrangement</h3>
@@ -317,6 +391,9 @@ color: var(--background);
 
 .intro{
     margin-inline: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .helaftensArrangement, .bryllupsPakken, .konfirmationsPakken, .modePakken{

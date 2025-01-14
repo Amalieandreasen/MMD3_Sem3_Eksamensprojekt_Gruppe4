@@ -4,9 +4,12 @@ import { ref } from 'vue';
 import Tabs from '@/assets/components/Tabs.vue';
 import Mousserende from '@/assets/components/Mousserende.vue';
 import Hvidvin from '@/assets/components/Hvidvin.vue';
+import hero from '@/assets/img/vinkortMobil/hero.png'
+import mobileHero from '@/assets/img/vinkortDesktop/hero.png'
 
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import TheHero from '@/assets/components/TheHero.vue';
 
 const menukortTabs = [
   { title: "Mousserende", component: Mousserende },
@@ -20,14 +23,20 @@ const menukortTabs = [
 <template>
     <main>
       <Navigation/>
-        <section class="heroSec">
+        <!-- <section class="heroSec">
       <div class="heroOverlay">
         <img src="../assets/img/vinkortMobil/hero.png" alt="Vin" srcset="../assets/img/vinkortDesktop/hero.png 768w">
         <div class="heroText">
           <h1>Vinkort</h1>
         </div>
       </div>
-    </section>
+    </section> -->
+    <TheHero
+    :imgSrc="hero" 
+    :imgSrcSet="`${mobileHero} 768w`"
+    title="Vinkort"
+    imgAlt="Billede af vin"
+    />
 
     <section class="introSec">
       <div class="introWrapper">
@@ -51,7 +60,7 @@ const menukortTabs = [
 </template>
 
 <style scoped>
-.heroSec {
+/* .heroSec {
   position: relative;
   width: 100%;
   height: 50vh; 
@@ -89,7 +98,7 @@ const menukortTabs = [
   color: white;
   z-index: 2;
   text-align: center;
-}
+} */
 
 .introSec{
     margin: 8%;
