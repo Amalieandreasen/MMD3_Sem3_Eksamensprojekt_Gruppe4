@@ -41,7 +41,6 @@ const menukortTabs = [
     title="Menukort"
     imgAlt="Billede af ret"
     />
-    
     <section class="introSec">
       <div class="introWrapper">
       <div>
