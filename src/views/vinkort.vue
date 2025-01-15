@@ -6,6 +6,7 @@ import Mousserende from '@/assets/components/Mousserende.vue';
 import Hvidvin from '@/assets/components/Hvidvin.vue';
 import hero from '@/assets/img/vinkortMobil/hero.png'
 import mobileHero from '@/assets/img/vinkortDesktop/hero.png'
+import { useHead } from '@vueuse/head';
 
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';

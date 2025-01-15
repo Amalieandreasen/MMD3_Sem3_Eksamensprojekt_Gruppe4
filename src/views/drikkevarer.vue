@@ -6,6 +6,7 @@ import ItalienskOl from '@/assets/components/ItalienskOl.vue';
 import KoldeDrikkevarer from '@/assets/components/KoldeDrikkevarer.vue';
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
+import { useHead } from '@vueuse/head';
 
 // Her oprettes et array med de forskellige Tabs der skal bruges. 
 const menukortTabs = [

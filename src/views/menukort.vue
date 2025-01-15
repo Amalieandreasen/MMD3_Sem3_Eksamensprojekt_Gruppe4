@@ -6,6 +6,7 @@ import Tabs from '@/assets/components/Tabs.vue';
 import SnacksDrinks from '@/assets/components/SnacksDrinks.vue';
 import Saesonretter from '@/assets/components/saesonretter.vue';
 import hero from '@/assets/img/menuDesktop/hero.png'
+import { useHead } from '@vueuse/head';
 
 import Navigation from '../assets/components/Navigation.vue';
 import TheFooter from '@/assets/components/TheFooter.vue';
