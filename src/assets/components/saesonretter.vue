@@ -6,16 +6,16 @@ const menuItemsFR = [
 ];
 
 const menuItemsPR = [
-  { name: "18 måneder lagret Parmaskinke på butterdej med trøffelmayo", price: "kr. 155,00", populare: true  },
-  { name: "Mortadella fra Bologna med straciatella ost og pistacienødder", price: "kr. 98,00", populare: false  },
-  { name: "Bagt torsk på variation af kål med parmesansauce", price: "kr. 165,00", populare: false  },
+  { name: "Tagliolini med Nduja og soltørret tomat", price: "kr. 215,00", populare: true  },
+  { name: "Tagliatelle med stegte rejer, parmesan og hvidløg i hvidvins flødesauce", price: "kr. 225,00", populare: false  },
+  { name: "“Osso Buco e risotto Milanese” - Osso Buco på milanesisk safranrisotto", price: "kr. 285,00", populare: false  },
 ];
 
 const menuItemsFK = [
-  { name: "18 måneder lagret Parmaskinke på butterdej med trøffelmayo", price: "kr. 155,00", populare: true  },
-  { name: "Mortadella fra Bologna med straciatella ost og pistacienødder", price: "kr. 98,00", populare: false  },
-  { name: "Bagt torsk på variation af kål med parmesansauce", price: "kr. 165,00", populare: false  },
+  { name: "Torsk bagt med løg, tomater og hvidvin", price: "kr. 320,00", populare: true  },
+  { name: "Oksemørbrad fra Himmerland med stegte svampe og rødvinssauce ", price: "180g. kr. 365,00 / 300g. kr. 440,00", populare: false  }
 ];
+
 </script>
 
 <template>
