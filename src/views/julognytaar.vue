@@ -366,7 +366,7 @@ useHead({
         </p>
         <div class="nytaarsaftenButtons">
             <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
-            <TheButton title="Se menuen" />
+            <TheButton title="Se menuen" :isPdf="true" />
         </a>
             <a href="https://book.dinnerbooking.com/dk/da-DK/book/table/pax/195/2" target="_blank">
             <TheButton title="Book bord" />
@@ -668,7 +668,7 @@ useHead({
             <a href="https://drive.google.com/file/d/1s196RejPgrhZOKA9PP3ZviCDBg_UocRc/view?usp=sharing" target="_blank">
         <TheButton title="Se menuen" :isPdf="true"/>
     </a>
-        <TheButton title="Bestil Menu" :isPdf="true"/>
+        <TheButton title="Bestil Menu"/>
     </div>
 </div>
         <img src="../assets/img/julognytaarMobil/nytaarsmenu.png" alt="Nytårsmenu" srcset="../assets/img/julognytarDesktop/nytaarsmenu.png 768w">
